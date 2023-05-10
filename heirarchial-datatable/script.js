@@ -7,7 +7,7 @@ let initialData = [
     { id: 111, name: 'Tiana 1', parentID: 1 },
     { id: 333, name: 'Tiana 8', parentID: 1 },
     { id: 3, name: 'Parent 3', parentID: null },
-    { id: 5, name: 'Romy', parentID: null },
+    { id: 5, name: 'Parent 5', parentID: null },
     { id: 26, name: 'Alba', parentID: 11 },
     { id: 333, name: 'Tiana 4', parentID: 111 },
     { id: 6, name: 'Tiana 1', parentID: 1 },
@@ -31,7 +31,7 @@ let initialData = [
     { id: 17, name: 'Alvaro', parentID: 6 },
     { id: 444, name: 'Tiana 5', parentID: 111 },
     { id: 19, name: 'Paxton', parentID: 7 },
-    { id: 4, name: 'Nico', parentID: null },
+    { id: 4, name: 'Parent 4', parentID: null },
     { id: 1, name: 'Parent 1', parentID: null },
     { id: 42, name: 'B 1', parentID: 37 },
     { id: 20, name: 'Keon', parentID: 8 },
@@ -52,6 +52,7 @@ let initialData = [
     { id: 84, name: 'F', parentID: 12 },
     { id: 30, name: 'Mai', parentID: 12 },
     { id: 31, name: 'Harvey', parentID: 13 },
+    { id: 198, name: 'Parent 0', parentID: null },
     { id: 32, name: 'Karla', parentID: 13 },
     { id: 33, name: 'Kingsley', parentID: 14 },
     { id: 34, name: 'Mila', parentID: 14 },
@@ -64,6 +65,8 @@ let initialData = [
     { id: 39, name: 'Remi', parentID: 17 },
     { id: 40, name: 'A 1', parentID: 37 },
 ]
+
+let sortDirection = 'asc'
 
 function assignNodes(data) {
     let idToNodeMap = new Map()
@@ -167,6 +170,7 @@ function flatten(obj) {
     }
     return flattened
 }
+
 // Sorts as parent-child
 let sortedData = sortData(dataWithNodes)
 
