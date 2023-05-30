@@ -85,12 +85,14 @@ let handleSelectAllCapabilities = function (data) {
             $('.select2-results__options li').attr('aria-selected', true)
             $('.select2-results__options li').addClass('select2-results__option--selected')
             selectedOptionIds = allOptions
+            console.log(`selectedOptionIds from selectAll CHECK - ${selectedOptionIds}`)
         } else {
             $('#checkboxSelect').val([]).trigger('change')
             $('.select2-results__options input[type=checkbox]').prop('checked', false)
             $('.select2-results__options li').attr('aria-selected', false)
             $('.select2-results__options li').removeClass('select2-results__option--selected')
             selectedOptionIds = []
+            console.log(`selectedOptionIds from selectAll UNCHECK - ${selectedOptionIds}`)
         }
     })
 }
@@ -98,10 +100,12 @@ let handleSelectAllCapabilities = function (data) {
 let handleRetrievingIndividualData = function () {
     $('#checkboxSelect').on('select2:select', function (e) {
         selectedOptionIds.push(e.params.data.id)
+        console.log(`selectedOptionIds from individual CHECK - ${selectedOptionIds}`)
     })
 
     $('#checkboxSelect').on('select2:unselect', function (e) {
         selectedOptionIds = selectedOptionIds.filter((id) => id !== e.params.data.id)
+        console.log(`selectedOptionIds from individual UNCHECK - ${selectedOptionIds}`)
     })
 }
 
