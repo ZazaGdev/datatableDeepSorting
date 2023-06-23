@@ -78,6 +78,7 @@ let handleSelectAllCapabilities = function (data) {
     `)
 
     $(document).on('change', '#selectAllCheckbox', function () {
+        console.log(123)
         if (this.checked) {
             let allOptions = data.map((option) => option.id)
             $('#checkboxSelect').val(allOptions).trigger('change')
