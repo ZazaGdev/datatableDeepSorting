@@ -1,11 +1,15 @@
 body {
+	@include somethingRed();
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin somethingRed() {
 	font-family: var(--primary-font);
 	background-color: var(--primary-color);
 	color: var(--text-color);
 	font-size: var(--primary-font-size);
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 }
 
 h1,
