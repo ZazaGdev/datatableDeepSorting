@@ -53,12 +53,12 @@
   box-shadow: 0px 20px 40px 0px rgba(82, 63, 105, 0.15) !important;
 }
 .pick_snapshot--options li {
-  padding: 0 13px !important;
+  padding: 0 !important;
 }
 .pick_snapshot--options ul {
   padding-top: 0px !important;
 }
-.pick_snapshot__selectAll {
+.pick_snapshot--selectAll {
   width: 454.5px;
   background-color: #fafafa !important;
   padding-left: 13px;

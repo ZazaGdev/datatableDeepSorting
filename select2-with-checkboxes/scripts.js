@@ -35,6 +35,7 @@ let flattenTemplateObject = function (object) {
 }
 
 let initiateSelect2 = function (data) {
+    console.log(data)
     $('#checkboxSelect').select2({
         data: data,
         placeholder: 'Select Snapshots',
@@ -48,9 +49,9 @@ let initiateSelect2 = function (data) {
             var selectedValues = $('#checkboxSelect').val() || []
             var isChecked = selectedValues.indexOf(data.id) > -1 ? 'checked' : ''
             var $result = $(`
-                <label class='py-4 m-0 d-flex align-items-center act-cursor-pointer'>
+                <label class='p-4 m-0 d-flex align-items-center act-cursor-pointer'>
                     <div class='act-checkbox-wrapper'>
-                        <input type='checkbox' class='act-select-all-checkbox' ${isChecked}>
+                        <input type='checkbox' ${isChecked}>
                         <span></span>
                     </div>
                     <span class='d-block'>${data.label}</span>
@@ -62,13 +63,14 @@ let initiateSelect2 = function (data) {
             return markup
         },
         closeOnSelect: false,
+        dropdownCssClass: 'pick_snapshot--options',
     })
 }
 
 let handleSelectAllCapabilities = function (data) {
     // Add a 'Select All' checkbox to the dropdown
     $('#checkboxSelect').data('select2').$dropdown.prepend(`
-        <label class="pick_snapshot__selectAll pvgSelectAllWrapper py-4 m-0 d-flex align-items-center act-cursor-pointer">
+        <label class="pick_snapshot--selectAll pvgSelectAllWrapper p-4 m-0 d-flex align-items-center act-cursor-pointer">
             <div class="act-checkbox-wrapper">
                 <input type="checkbox" id="selectAllCheckbox" class="act-select-all-checkbox">
                 <span></span>
@@ -78,7 +80,6 @@ let handleSelectAllCapabilities = function (data) {
     `)
 
     $(document).on('change', '#selectAllCheckbox', function () {
-        console.log(123)
         if (this.checked) {
             let allOptions = data.map((option) => option.id)
             $('#checkboxSelect').val(allOptions).trigger('change')
