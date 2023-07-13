@@ -1,29 +1,33 @@
-import { themes } from "./theme.js";
+import themes from "./theme.js";
 
-function changeTheme(themeName) {
-	const theme = themes[themeName];
-	Object.keys(theme).forEach((key) => {
-		const value = theme[key];
-		document.documentElement.style.setProperty(key, value);
+const root = document.documentElement;
+
+function applyTheme(themeName) {
+	console.log(themeName);
+	// Get the theme from the themes object
+	const theme = themes.vars[themeName];
+
+	if (!theme) {
+		console.error(`Theme ${themeName} does not exist.`);
+		return;
+	}
+
+	// Assign each property in the theme to a CSS variable on the root
+	Object.keys(theme).forEach((property) => {
+		root.style.setProperty(property, theme[property]);
 	});
 }
 
-document
-	.getElementById("switch-to-light")
-	.addEventListener("click", function () {
-		changeTheme("light");
-	});
+export function getCSSVariableValue(variableName) {
+	// Get the root element
+	const root = document.documentElement;
 
-document
-	.getElementById("switch-to-dark")
-	.addEventListener("click", function () {
-		changeTheme("dark");
-	});
+	// Get the value of the CSS variable
+	const value = getComputedStyle(root).getPropertyValue(variableName);
 
-document
-	.getElementById("switch-to-primary")
-	.addEventListener("click", function () {
-		changeTheme("primary");
-	});
+	return value.trim(); // trim() is used to remove any leading/trailing whitespace
+}
+applyTheme("acPrimary"); // Call this function to apply the 'acPrimary' theme
 
-changeTheme("light");
+// Usage
+console.log(getCSSVariableValue("--ac-color-primary"));
