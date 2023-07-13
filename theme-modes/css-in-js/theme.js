@@ -168,4 +168,25 @@ const themes = {
 	},
 };
 
-export default themes;
+function applyTheme(themeName, theme) {
+	const root = document.documentElement;
+	const themeToApply = theme.vars[themeName];
+
+	Object.entries(themeToApply).forEach(([key, value]) => {
+		root.style.setProperty(key, value);
+	});
+}
+
+function getCSSVariableValue(variableName) {
+	const root = document.documentElement;
+	const value = getComputedStyle(root).getPropertyValue(variableName);
+
+	return value.trim();
+}
+
+function setCSSVariableValue(variableName, value) {
+	const root = document.documentElement;
+	root.style.setProperty(variableName, value);
+}
+
+export { themes, applyTheme, getCSSVariableValue, setCSSVariableValue };
