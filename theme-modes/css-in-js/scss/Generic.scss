@@ -1,0 +1,9 @@
+input {
+    &:focus-visible {
+        outline-color: transparent;
+    }
+}
+
+textarea {
+    resize: none;
+}

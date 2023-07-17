@@ -1,7 +1,7 @@
 @mixin textStyles(
     $fontWeight: var(--ac-font-weight-2), 
     $fontSize: var(--ac-font-size-5), 
-    $lineHeight:var(--ac-line-height-7), 
+    $lineHeight:var(--ac-line-height-3), 
     $color: var(--ac-color-text-main)) 
     {
         font-weight: $fontWeight;

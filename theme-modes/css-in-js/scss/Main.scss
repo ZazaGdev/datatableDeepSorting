@@ -5,18 +5,6 @@
 @import 'Utilities';
 @import 'Tools';
 
-input {
-    transition: var(--ac-transition-md) border;
-
-    &:focus-visible {
-        outline-color: transparent;
-        border: var(--ac-border-width-1) solid var(--ac-color-gray-700);
-    }
-
-    &:not(:focus-visible):hover {
-        border: var(--ac-border-width-1) solid var(--ac-color-gray-500);
-    }
-}
 
 .c-label-default {
     padding-bottom: 6px;
@@ -52,6 +40,11 @@ input {
     }
 }
 
+.c-input-default-sm {
+    @extend .c-input-default-lg;
+    padding: var(--ac-space-6) var(--ac-space-8);
+}
+
 // IGNORE CSS BELOW
 .grid-container {
     width: 100%;
@@ -61,7 +54,7 @@ input {
     grid-template-rows: 100px repeat(5, 1fr);
 
     > .item {
-        border: 1px solid rgb(205, 205, 205);
+        border: 2px dotted rgb(205, 205, 205);
     }
 
     > .item-title {
@@ -70,5 +63,5 @@ input {
 }
 
 .item {
-    padding: 5px;
+    padding:15px;
 }

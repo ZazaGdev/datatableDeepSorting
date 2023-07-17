@@ -1,16 +1,26 @@
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 input {
   transition: var(--ac-transition-md) border;
 }
 input:focus-visible {
-  outline-color: transparent;
   border: var(--ac-border-width-1) solid var(--ac-color-gray-700);
 }
 input:not(:focus-visible):hover {
   border: var(--ac-border-width-1) solid var(--ac-color-gray-500);
+}
+
+input:focus-visible {
+  outline-color: transparent;
+}
+
+textarea {
+  resize: none;
 }
 
 .c-label-default {
@@ -21,7 +31,7 @@ input:not(:focus-visible):hover {
   color: var(--ac-color-text-main);
 }
 
-.c-input-default-lg {
+.c-input-default-lg, .c-input-default-sm {
   width: auto;
   height: auto;
   min-width: 200px;
@@ -34,26 +44,30 @@ input:not(:focus-visible):hover {
   padding: var(--ac-space-9) var(--ac-space-8);
   font-weight: var(--ac-font-weight-2);
   font-size: var(--ac-font-size-5);
-  line-height: var(--ac-line-height-7);
+  line-height: var(--ac-line-height-3);
   color: var(--ac-color-text-dark);
 }
-.c-input-default-lg ::-moz-placeholder {
+.c-input-default-lg ::-moz-placeholder, .c-input-default-sm ::-moz-placeholder {
   font-weight: var(--ac-font-weight-2);
   font-size: var(--ac-font-size-5);
-  line-height: var(--ac-line-height-7);
+  line-height: var(--ac-line-height-3);
   color: var(--ac-color-text-gray);
 }
-.c-input-default-lg ::placeholder {
+.c-input-default-lg ::placeholder, .c-input-default-sm ::placeholder {
   font-weight: var(--ac-font-weight-2);
   font-size: var(--ac-font-size-5);
-  line-height: var(--ac-line-height-7);
+  line-height: var(--ac-line-height-3);
   color: var(--ac-color-text-gray);
 }
-.c-input-default-lg :focus-visible {
+.c-input-default-lg :focus-visible, .c-input-default-sm :focus-visible {
   background-color: transparent;
   border: var(--ac-border-width-1) solid var(--ac-color-300);
   border-radius: 0;
   padding: 0;
+}
+
+.c-input-default-sm {
+  padding: var(--ac-space-6) var(--ac-space-8);
 }
 
 .grid-container {
@@ -64,12 +78,12 @@ input:not(:focus-visible):hover {
   grid-template-rows: 100px repeat(5, 1fr);
 }
 .grid-container > .item {
-  border: 1px solid rgb(205, 205, 205);
+  border: 2px dotted rgb(205, 205, 205);
 }
 .grid-container > .item-title {
   align-self: end;
 }
 
 .item {
-  padding: 5px;
+  padding: 15px;
 }/*# sourceMappingURL=Main.css.map */

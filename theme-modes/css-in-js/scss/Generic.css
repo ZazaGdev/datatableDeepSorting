@@ -1,1 +1,7 @@
-/*# sourceMappingURL=Generic.css.map */
+input:focus-visible {
+  outline-color: transparent;
+}
+
+textarea {
+  resize: none;
+}/*# sourceMappingURL=Generic.css.map */

@@ -4,7 +4,7 @@ const lineHeightNum = 1
 const spaceNum = 1
 
 export default {
-    // Colors
+    // ---------- COLORS ----------
     '--ac-color-primary': 'rgba(42, 98, 167, 1)', // #2A62A7
     '--ac-color-secondary': 'rgba(68, 153, 127, 1)', // #2A62A7
     '--ac-color-border': 'rgba(228, 230, 239, 1)', // #E4E6EF
@@ -81,13 +81,13 @@ export default {
     '--ac-color-gray-500': 'rgba(102, 112, 133, 1)', // #667085
     '--ac-color-gray-700': 'rgba(52, 64, 84, 1)', // #344054
     '--ac-color-gray-900': 'rgba(16, 24, 40, 1)', // #101828
-    // Animation speed
+    // ---------- ANIMATION SPEED ----------
     '--ac-transition-sm': '0.1s',
     '--ac-transition-md': '0.3s',
     '--ac-transition-lg': '0.5s',
     '--ac-transition-xl': '0.7s',
     '--ac-transition-xxl': '0.9s',
-    // Border
+    // ---------- BORDER ----------
     '--ac-border-width-1': `1px`,
     '--ac-border-width-2': `2px`,
     '--ac-border-width-3': `3px`,
@@ -102,7 +102,7 @@ export default {
     '--ac-border-radius-8': `${borderRadNum * 16}px`,
     '--ac-border-radius-9': `${borderRadNum * 18}px`,
     '--ac-border-radius-9': `${borderRadNum * 20}px`,
-    // Spacing
+    // ---------- SPACING ----------
     '--ac-space-1': `${spaceNum * 2}px`,
     '--ac-space-2': `${spaceNum * 3}px`,
     '--ac-space-3': `${spaceNum * 4}px`,
@@ -118,7 +118,7 @@ export default {
     '--ac-space-13': `${spaceNum * 24}px`,
     '--ac-space-14': `${spaceNum * 32}px`,
     '--ac-space-15': `${spaceNum * 40}px`,
-    // Fonts
+    // ---------- FONTS ----------
     '--ac-font-primary': `Poppins, Helvetica, "sans-serif"`,
     '--ac-font-secondary': `"sans-serif"`,
     '--ac-font-weight-1': 300,
@@ -147,15 +147,9 @@ export default {
     '--ac-font-size-18': `${fontSizeNum * 3.5}rem`,
     '--ac-font-size-19': `${fontSizeNum * 4}rem`,
     '--ac-font-size-20': `${fontSizeNum * 5}rem`,
-    '--ac-line-height-1': `${lineHeightNum * 0.5}rem`,
-    '--ac-line-height-2': `${lineHeightNum * 0.625}rem`,
-    '--ac-line-height-3': `${lineHeightNum * 0.75}rem`,
-    '--ac-line-height-4': `${lineHeightNum * 0.875}rem`,
-    '--ac-line-height-5': `${lineHeightNum * 1}rem`,
-    '--ac-line-height-6': `${lineHeightNum * 1.125}rem`,
-    '--ac-line-height-7': `${lineHeightNum * 1.25}rem`,
-    '--ac-line-height-8': `${lineHeightNum * 1.375}rem`,
-    '--ac-line-height-9': `${lineHeightNum * 1.5}rem`,
-    '--ac-line-height-9': `${lineHeightNum * 1.75}rem`,
-    '--ac-line-height-10': `${lineHeightNum * 2}rem`,
+    '--ac-line-height-1': `${lineHeightNum * 115}%`,
+    '--ac-line-height-2': `${lineHeightNum * 120}%`,
+    '--ac-line-height-3': `${lineHeightNum * 125}%`,
+    '--ac-line-height-4': `${lineHeightNum * 130}%`,
+    '--ac-line-height-5': `${lineHeightNum * 140}%`,
 }
