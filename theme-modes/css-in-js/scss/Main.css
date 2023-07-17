@@ -1,8 +1,5 @@
 * {
   font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 input {
@@ -13,6 +10,17 @@ input:focus-visible {
 }
 input:not(:focus-visible):hover {
   border: var(--ac-border-width-1) solid var(--ac-color-gray-500);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 input:focus-visible {
@@ -32,7 +40,7 @@ textarea {
 }
 
 .c-input-default-lg, .c-input-default-sm {
-  width: auto;
+  width: 100%;
   height: auto;
   min-width: 200px;
   max-width: 350px;
@@ -68,6 +76,10 @@ textarea {
 
 .c-input-default-sm {
   padding: var(--ac-space-6) var(--ac-space-8);
+}
+
+.c-input-prefix-text-lg {
+  display: flex;
 }
 
 .grid-container {

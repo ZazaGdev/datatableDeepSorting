@@ -19,6 +19,7 @@
 
 .c-input-default-lg {
     @include dimensions(
+        $width: 100%,
         $maxWidth: 350px, 
         $minWidth: 200px
     );
@@ -44,6 +45,11 @@
     @extend .c-input-default-lg;
     padding: var(--ac-space-6) var(--ac-space-8);
 }
+
+.c-input-prefix-text-lg {
+    display: flex;
+}
+
 
 // IGNORE CSS BELOW
 .grid-container {
