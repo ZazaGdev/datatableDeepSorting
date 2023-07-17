@@ -1,47 +1,42 @@
-:root {
-	--blue: #1e90ff;
-	--white: #ffffff;
-}
 body {
-	font-family: var(--primary-font);
-	background-color: var(--primary-color);
-	color: var(--text-color);
-	font-size: var(--primary-font-size);
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  font-family: var(--primary-font);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: var(--font-size-1);
+  line-height: var(--font-size-1);
 }
 
 h1,
 h2 {
-	margin: var(--standard-margin);
+  margin: var(--standard-margin);
 }
 
 h2 {
-	font-size: var(--secondary-font-size);
-	font-family: var(--secondary-font);
+  font-size: var(--secondary-font-size);
+  font-family: var(--secondary-font);
 }
 
 .modal {
-	width: var(--modal-width);
-	padding: var(--button-padding);
-	background-color: var(--secondary-color);
-	margin: auto;
+  border-radius: var(--border-radius-5);
+  width: var(--modal-width);
+  padding: var(--button-padding);
+  background-color: var(--secondary-color);
+  margin: auto;
 }
 
 .nav-bar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--secondary-color);
-	padding: var(--button-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: var(--button-padding);
 }
 
 .nav-bar button {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .section {
-	margin-bottom: var(--standard-margin);
-	padding: 15px;
-} /*# sourceMappingURL=styles.css.map */
+  margin-bottom: var(--standard-margin);
+  padding: 15px;
+}/*# sourceMappingURL=styles.css.map */
