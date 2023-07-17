@@ -82,11 +82,11 @@ export default {
     '--ac-color-gray-700': 'rgba(52, 64, 84, 1)', // #344054
     '--ac-color-gray-900': 'rgba(16, 24, 40, 1)', // #101828
     // Animation speed
-    '--ac-transition-sm': '0.1s all',
-    '--ac-transition-md': '0.3s all',
-    '--ac-transition-lg': '0.5s all',
-    '--ac-transition-xl': '0.7s all',
-    '--ac-transition-xxl': '0.9s all',
+    '--ac-transition-sm': '0.1s',
+    '--ac-transition-md': '0.3s',
+    '--ac-transition-lg': '0.5s',
+    '--ac-transition-xl': '0.7s',
+    '--ac-transition-xxl': '0.9s',
     // Border
     '--ac-border-width-1': `1px`,
     '--ac-border-width-2': `2px`,

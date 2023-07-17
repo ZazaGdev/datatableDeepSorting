@@ -1,0 +1,39 @@
+@mixin textStyles(
+    $fontWeight: var(--ac-font-weight-2), 
+    $fontSize: var(--ac-font-size-5), 
+    $lineHeight:var(--ac-line-height-7), 
+    $color: var(--ac-color-text-main)) 
+    {
+        font-weight: $fontWeight;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        color: $color;
+}
+
+@mixin dimensions(
+    $width: auto, 
+    $height: auto, 
+    $minWidth: 0, 
+    $maxWidth: none, 
+    $minHeight: 0, 
+    $maxHeight: none) 
+    {
+        width: $width;
+        height: $height;
+        min-width: $minWidth;
+        max-width: $maxWidth;
+        min-height: $minHeight;
+        max-height: $maxHeight;
+}
+
+@mixin inputStyles(
+    $backgroundColor: transparent, 
+    $border: none, 
+    $borderRadius: 0, 
+    $padding: 0) 
+    {
+        background-color: $backgroundColor;
+        border: $border;
+        border-radius: $borderRadius;
+        padding: $padding;
+}

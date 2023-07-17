@@ -3,3 +3,72 @@
 @import 'Generic';
 @import 'Objects';
 @import 'Utilities';
+@import 'Tools';
+
+input {
+    transition: var(--ac-transition-md) border;
+
+    &:focus-visible {
+        outline-color: transparent;
+        border: var(--ac-border-width-1) solid var(--ac-color-gray-700);
+    }
+
+    &:not(:focus-visible):hover {
+        border: var(--ac-border-width-1) solid var(--ac-color-gray-500);
+    }
+}
+
+.c-label-default {
+    padding-bottom: 6px;
+
+    @include textStyles(
+        $fontWeight:var(--ac-font-weight-2),
+        $fontSize: var(--ac-font-size-4),
+        $lineHeight: var(--ac-line-height-7),
+        $color: var(--ac-color-text-main)
+    );
+}
+
+.c-input-default-lg {
+    @include dimensions(
+        $maxWidth: 350px, 
+        $minWidth: 200px
+    );
+    
+    @include inputStyles(
+        $border: var(--ac-border-width-1) solid var(--ac-color-border), 
+        $borderRadius: var(--ac-border-radius-4),
+        $padding: (var(--ac-space-9) var(--ac-space-8))
+    );
+
+    @include textStyles($color: var(--ac-color-text-dark)); 
+
+    ::placeholder {
+        @include textStyles($color:var(--ac-color-text-gray));
+    }
+
+    :focus-visible{
+        @include inputStyles($border: var(--ac-border-width-1) solid var(--ac-color-300))
+    }
+}
+
+// IGNORE CSS BELOW
+.grid-container {
+    width: 100%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(5, 1fr);
+
+    > .item {
+        border: 1px solid rgb(205, 205, 205);
+    }
+
+    > .item-title {
+        align-self: end;
+    }
+}
+
+.item {
+    padding: 5px;
+}
