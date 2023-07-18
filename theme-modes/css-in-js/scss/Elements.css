@@ -5,9 +5,9 @@
 input {
   transition: var(--ac-transition-md) border;
 }
-input:focus-visible {
+input:focus-visible, input:focus {
   border: var(--ac-border-width-1) solid var(--ac-color-gray-700) !important;
 }
-input:not(:focus-visible):hover {
+input:not(:focus-visible):hover, input:not(:focus):hover {
   border: var(--ac-border-width-1) solid var(--ac-color-gray-500) !important;
 }/*# sourceMappingURL=Elements.css.map */
