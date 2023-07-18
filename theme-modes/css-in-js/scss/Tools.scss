@@ -10,6 +10,36 @@
         color: $color;
 }
 
+
+@mixin inputStyles(
+    $backgroundColor: transparent, 
+    $border: none, 
+    $borderRadius: 0, 
+    $padding: 0) 
+    {
+        background-color: $backgroundColor;
+        border: $border;
+        border-radius: $borderRadius;
+        padding: $padding;
+}
+
+@mixin border(
+    $border: none,
+    $borderRadius: 0,
+    $borderTopLeft: 0, 
+    $borderTopRight: 0, 
+    $borderBottomRight: 0, 
+    $borderBottomLeft: 0) 
+    {
+        border: $border;
+        border-radius: $borderRadius;
+        border-top-left-radius: $borderTopLeft;
+        border-top-right-radius: $borderTopRight;
+        border-bottom-right-radius: $borderBottomRight;
+        border-bottom-left-radius: $borderBottomLeft;
+}
+
+
 @mixin dimensions(
     $width: auto, 
     $height: auto, 
@@ -26,14 +56,8 @@
         max-height: $maxHeight;
 }
 
-@mixin inputStyles(
-    $backgroundColor: transparent, 
-    $border: none, 
-    $borderRadius: 0, 
-    $padding: 0) 
-    {
-        background-color: $backgroundColor;
-        border: $border;
-        border-radius: $borderRadius;
-        padding: $padding;
+@mixin flexCentered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

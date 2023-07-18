@@ -20,6 +20,7 @@
 .c-input-default-lg {
     @include dimensions(
         $width: 100%,
+        $height: 48px,
         $maxWidth: 350px, 
         $minWidth: 200px
     );
@@ -27,7 +28,7 @@
     @include inputStyles(
         $border: var(--ac-border-width-1) solid var(--ac-color-border), 
         $borderRadius: var(--ac-border-radius-4),
-        $padding: (var(--ac-space-9) var(--ac-space-8))
+        $padding: 0 var(--ac-space-8)
     );
 
     @include textStyles($color: var(--ac-color-text-dark)); 
@@ -35,21 +36,52 @@
     ::placeholder {
         @include textStyles($color:var(--ac-color-text-gray));
     }
-
-    :focus-visible{
-        @include inputStyles($border: var(--ac-border-width-1) solid var(--ac-color-300))
-    }
 }
 
 .c-input-default-sm {
     @extend .c-input-default-lg;
-    padding: var(--ac-space-6) var(--ac-space-8);
+    
+    height: 36px,
 }
 
 .c-input-prefix-text-lg {
     display: flex;
+
+    p {
+        @include flexCentered;
+        @include textStyles($color: var(--ac-color-text-gray));
+        @include dimensions(
+            75px, 48px, 75px
+        );
+
+        @include border(
+            $border: var(--ac-border-width-1) solid var(--ac-color-border),
+            $borderBottomLeft: var(--ac-border-radius-4), 
+            $borderTopLeft: var(--ac-border-radius-4)
+        )
+    }
+
+    input {
+        padding: var(--ac-space-8);
+
+        @include border(
+            $border: var(--ac-border-width-1) solid var(--ac-color-border),
+            $borderBottomRight: var(--ac-border-radius-4), 
+            $borderTopRight: var(--ac-border-radius-4)
+        );
+
+        @include dimensions(
+            100%, 48px, 200px, 275px
+        );
+    }
 }
 
+.c-input-prefix-icon-lg {
+    @extend .c-input-prefix-text-lg;
+    i {
+        font-size: var(--ac-font-size-8);
+    }
+}
 
 // IGNORE CSS BELOW
 .grid-container {
