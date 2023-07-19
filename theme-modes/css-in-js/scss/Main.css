@@ -40,10 +40,11 @@ textarea {
 }
 
 .c-input-default-lg, .c-input-default-sm {
+  position: relative;
   width: 100%;
   height: 48px;
-  min-width: 200px;
-  max-width: 400px;
+  min-width: 400px;
+  max-width: 200px;
   min-height: 0;
   max-height: none;
 }
@@ -57,12 +58,17 @@ textarea {
   padding-right: var(--ac-space-14);
   border: var(--ac-border-width-1) solid var(--ac-color-error-light);
 }
-.c-input-default-lg.error i, .error.c-input-default-sm i {
+.c-input-default-lg.error > i, .error.c-input-default-sm > i {
   position: absolute;
-  color: var(--ac-color-error-300);
   right: 3%;
-  top: 55%;
+  top: calc(50% - var(--ac-font-size-7) / 2);
   font-size: var(--ac-font-size-7);
+}
+.c-input-default-lg.error > i[class*=exclamation], .error.c-input-default-sm > i[class*=exclamation] {
+  color: var(--ac-color-error-main);
+}
+.c-input-default-lg.disabled, .disabled.c-input-default-sm {
+  background-color: var(--ac-color-gray-50);
 }
 .c-input-default-lg input, .c-input-default-sm input {
   width: 100%;
@@ -98,7 +104,14 @@ textarea {
 }
 
 .c-input-prefix-text-lg, .c-input-prefix-icon-lg {
+  position: relative;
   display: flex;
+  width: 100%;
+  height: 48px;
+  min-width: 400px;
+  max-width: 200px;
+  min-height: 0;
+  max-height: none;
 }
 .c-input-prefix-text-lg.filled > p, .filled.c-input-prefix-icon-lg > p {
   border: var(--ac-border-width-1) solid var(--ac-color-gray-300);
@@ -110,14 +123,20 @@ textarea {
   padding-right: var(--ac-space-14);
   border: var(--ac-border-width-1) solid var(--ac-color-error-light);
 }
-.c-input-prefix-text-lg.error i, .error.c-input-prefix-icon-lg i {
+.c-input-prefix-text-lg.error > i, .error.c-input-prefix-icon-lg > i {
   position: absolute;
-  color: var(--ac-color-error-300);
   right: 3%;
-  top: 55%;
+  top: calc(50% - var(--ac-font-size-7) / 2);
   font-size: var(--ac-font-size-7);
 }
+.c-input-prefix-text-lg.error > i[class*=exclamation], .error.c-input-prefix-icon-lg > i[class*=exclamation] {
+  color: var(--ac-color-error-main);
+}
+.c-input-prefix-text-lg.disabled, .disabled.c-input-prefix-icon-lg {
+  background-color: var(--ac-color-gray-50);
+}
 .c-input-prefix-text-lg p, .c-input-prefix-icon-lg p {
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,14 +177,19 @@ textarea {
   font-size: var(--ac-font-size-8);
 }
 
+.u-b-error {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-light) !important;
+}
+
 .grid-container {
   width: 100%;
   height: 800px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
 }
-.grid-container > .item {
+.grid-container > .item-wrapper {
   border: 2px dotted rgb(205, 205, 205);
 }
 .grid-container > .item-title {

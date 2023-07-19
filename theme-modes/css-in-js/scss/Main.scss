@@ -5,12 +5,11 @@
 @import 'Utilities';
 @import 'Tools';
 
-
 .c-label-default {
     padding-bottom: 6px;
 
     @include textStyles(
-        $fontWeight:var(--ac-font-weight-2),
+        $fontWeight: var(--ac-font-weight-2),
         $fontSize: var(--ac-font-size-4),
         $lineHeight: var(--ac-line-height-7),
         $color: var(--ac-color-text-main)
@@ -34,24 +33,30 @@
             border:var(--ac-border-width-1) solid var(--ac-color-error-light);
         }
 
-        & i {
+        & > i {
             position: absolute;
-            color: var(--ac-color-error-300);
             right: 3%;
-            top: 55%;
+            top: calc(50% - (var(--ac-font-size-7) / 2));
             font-size: var(--ac-font-size-7);
         }
+    
+        & > i[class*="exclamation"] {
+            color: var(--ac-color-error-main);
+        }
+    }
+
+    &.disabled {
+        background-color: var(--ac-color-gray-50);
     }
 }
 
 .c-input-default-lg {
+    position: relative;
+
     @include inputStates;
 
     @include dimensions(
-        $width: 100%,
-        $height: 48px,
-        $maxWidth: 400px, 
-        $minWidth: 200px
+        100%, 48px, 400px, 200px
     );
 
     input {
@@ -70,39 +75,44 @@
     }
 }
 
-
 .c-input-default-sm {
     @extend .c-input-default-lg;
 
-    height: 36px,
+    height: 36px;
 }
 
 .c-input-prefix-text-lg {
-    @include inputStates;
-
+    position: relative;
     display: flex;
 
+    @include inputStates;
+
+    @include dimensions(
+         100%, 48px, 400px, 200px
+    );
+     
     p {
+        padding:0 10px;
         @include flexCentered;
         @include textStyles($color: var(--ac-color-text-gray));
         @include dimensions(
             75px, 48px, 75px
         );
 
-        @include border(
+        @include borderRad(
             $border: var(--ac-border-width-1) solid var(--ac-color-border),
-            $borderBottomLeft: var(--ac-border-radius-4), 
-            $borderTopLeft: var(--ac-border-radius-4)
+            $borderRadBottomLeft: var(--ac-border-radius-4), 
+            $borderRadTopLeft: var(--ac-border-radius-4)
         )
     }
 
     input {
         padding: var(--ac-space-8);
 
-        @include border(
+        @include borderRad(
             $border: var(--ac-border-width-1) solid var(--ac-color-border),
-            $borderBottomRight: var(--ac-border-radius-4), 
-            $borderTopRight: var(--ac-border-radius-4)
+            $borderRadBottomRight: var(--ac-border-radius-4), 
+            $borderRadTopRight: var(--ac-border-radius-4)
         );
 
         @include dimensions(
@@ -119,15 +129,19 @@
     }
 }
 
+.u-b-error {
+    border:var(--ac-border-width-1) solid var(--ac-color-error-light) !important;
+}
+
 // IGNORE CSS BELOW
 .grid-container {
     width: 100%;
     height: 800px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px repeat(5, 1fr);
-
-    > .item {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    > .item-wrapper {
         border: 2px dotted rgb(205, 205, 205);
     }
 
@@ -139,3 +153,4 @@
 .item {
     padding:15px;
 }
+

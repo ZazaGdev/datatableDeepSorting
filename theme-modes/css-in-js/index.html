@@ -30,107 +30,142 @@
 
         <h1>1. Inputs</h1>
         <div class="grid-container">
-            <div class="item-title">
-                <h3>Default</h3>
-            </div>
-            <div class="item-title">
-                <h3>Filled</h3>
-            </div>
-            <div class="item-title">
-                <h3>Error</h3>
-            </div>
-            <div class="item item-1">
-                <div class="d-flex flex-column">
+            <div class="item-wrapper">
+                <div class="item">
+                    <h3 class="pb-5">Default</h3>
                     <label class="c-label-default">c-label-default</label>
                     <div class="c-input-default-lg">
                         <input placeholder="c-input-default-lg" type="text" />
                     </div>
                 </div>
+                <div class="item">
+                        <label class="c-label-default">c-label-default</label>
+    
+                        <div class="c-input-default-sm" >
+                            <input placeholder="c-input-default-sm" type="text" />
+                        </div>
+                </div>
+
+                <div class="item">
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-prefix-text-lg">
+                        <p>http://</p>
+                        <input type="text" placeholder="c-input-prefix-text-lg > input">
+                    </div>
+    
+                    <br>
+    
+                    <div class="c-input-prefix-icon-lg">
+                        <p><i class="fa-regular fa-envelope"></i></p>
+                        <input type="text" placeholder="c-input-prefix-icon-lg > input">
+                    </div>
+                </div>
             </div>
-            <div class="item item-2">
-                <div class="d-flex flex-column">
+            
+            <div class="item-wrapper">
+                <div class="item">
+                    <h3 class="pb-5">Filled</h3>
+    
                     <label class="c-label-default">c-label-default</label>
                     <div class="c-input-default-lg filled">
                         <input placeholder="c-input-default-lg filled" type="text" />
                     </div>
                 </div>
-            </div>
-            <div class="item item-3">
-                <div class="d-flex flex-column">
-                    <label class="c-label-default">c-label-default</label>
-                    <div class="c-input-default-lg error">
-                        <input placeholder="c-input-default-lg error" type="text" />
-                    </div>
-                </div>
-            </div>
-            <div class="item item-4">
-                <div class="d-flex flex-column">
-                    <label class="c-label-default">c-label-default</label>
 
-                    <div class="c-input-default-sm" >
-                        <input placeholder="c-input-default-sm" type="text" />
-                    </div>
-                </div>
-            </div>
-            <div class="item item-5">
-                <div class="d-flex flex-column">
+                <div class="item">
                     <label class="c-label-default">c-label-default</label>
                     <div class="c-input-default-sm filled">
                         <input placeholder="c-input-default-sm filled" type="text" />
                     </div>
                 </div>
+
+                <div class="item">
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-prefix-text-lg filled">
+                        <p>.filled</p>
+                        <input type="text" placeholder="... > input.filled">
+                    </div>
+    
+                    <br>
+                    <!--  -->
+                    <div class="c-input-prefix-icon-lg filled">
+                        <p><i class="fa-regular fa-phone"></i></p>
+                        <input type="text" placeholder="... > input.filled">
+                    </div>
+                    <!--  -->
+                </div>
             </div>
-            <div class="item item-6">
-                <div class="d-flex flex-column">
+            
+            <div class="item-wrapper">
+                <div class="item">
+                    <h3 class="pb-5">Error</h3>
+                    <!--  -->
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-default-lg error">
+                        <input placeholder="c-input-default-lg error" type="text" />
+                        <i class="fa-regular fa-circle-exclamation"></i>
+                    </div>
+                    <!--  -->
+                </div>
+                
+                
+                <div class="item">
                     <label class="c-label-default">c-label-default</label>
                     <div class="c-input-default-sm error">
                         <input placeholder="c-input-default-sm error" type="text" />
                         <i class="fa-regular fa-circle-exclamation"></i>
                     </div>
                 </div>
-            </div>
-            <div class="item item-7">
-                <label class="c-label-default">c-label-default</label>
-                <div class="c-input-prefix-text-lg">
-                    <p>http://</p>
-                    <input type="text" placeholder="c-input-prefix-text-lg > input">
-                </div>
-
-                <br>
-
-                <div class="c-input-prefix-icon-lg">
-                    <p><i class="fa-regular fa-envelope"></i></p>
-                    <input type="text" placeholder="c-input-prefix-icon-lg > input">
-                </div>
-            </div>
-            <div class="item item-8">
-                <label class="c-label-default">c-label-default</label>
-                <div class="c-input-prefix-text-lg filled">
-                    <p>.filled</p>
-                    <input type="text" placeholder="... > input.filled">
-                </div>
-
-                <br>
-
-                <div class="c-input-prefix-icon-lg filled">
-                    <p><i class="fa-regular fa-envelope"></i></p>
-                    <input type="text" placeholder="... > input.filled">
+               
+                
+                <div class="item">
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-prefix-text-lg error">
+                        <p class="u-b-error">:}</p>
+                        <input type="text" class="error" placeholder="... > input.error">
+                        <i class="fa-regular fa-circle-exclamation"></i>
+                    </div>
+    
+                    <br>
+    
+                    <div class="c-input-prefix-icon-lg error">
+                        <p class="u-b-error"><i class="fa-regular fa-user"></i></p>
+                        <input type="text" placeholder="... > input.error">
+                        <i class="fa-regular fa-circle-exclamation"></i>
+                    </div>
                 </div>
             </div>
-            <div class="item item-9">
-                <label class="c-label-default">c-label-default</label>
-                <div class="c-input-prefix-text-lg filled">
-                    <p>.u-b-error</p>
-                    <input type="text" class="error" placeholder="... > input.error">
-                    <i class="fa-regular fa-circle-exclamation"></i>
+            <div class="item-wrapper">
+                <div class="item">
+                    <h3 class="pb-5">Disabled</h3>
+                    <!--  -->
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-default-lg disabled">
+                        <input placeholder="c-input-default-lg" type="text" />
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="item">
+                    <label class="c-label-default">c-label-default</label>
+
+                    <div class="c-input-default-sm disabled" >
+                        <input placeholder="c-input-default-sm" type="text" />
+                    </div>
                 </div>
 
-                <br>
-
-                <div class="c-input-prefix-icon-lg">
-                    <p><i class="fa-regular fa-envelope"></i></p>
-                    <input type="text" class="error" placeholder="... > input.error">
-                    <i class="fa-regular fa-circle-exclamation"></i>
+                <div class="item">
+                    <label class="c-label-default">c-label-default</label>
+                    <div class="c-input-prefix-text-lg disabled">
+                        <p>http://</p>
+                        <input type="text" placeholder="c-input-prefix-text-lg > input">
+                    </div>
+    
+                    <br>
+    
+                    <div class="c-input-prefix-icon-lg disabled">
+                        <p><i class="fa-regular fa-envelope"></i></p>
+                        <input type="text" placeholder="c-input-prefix-icon-lg > input">
+                    </div>
                 </div>
             </div>
         </div>

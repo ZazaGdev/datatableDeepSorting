@@ -16,7 +16,7 @@ export default {
     '--ac-color-gray-50': 'rgba(249, 250, 251, 1)', // #F9FAFB
     '--ac-color-warning': 'rgba(186, 27, 35, 1)', // #BA1B23
     '--ac-color-white': 'rgba(255, 255, 255, 1)', // #FFFFFF
-    '--ac-color-error': 'rgba(240, 68, 56, 1)', // #F04438
+    '--ac-color-error-main': 'rgba(240, 68, 56, 1)', // #F04438
     '--ac-color-error-light': 'rgba(253, 162, 155, 1)', // #FDA29B
     '--ac-color-primary-25': 'rgba(237, 245, 255, 1)', // #EDF5FF
     '--ac-color-primary-50': 'rgba(205, 225, 252, 1)', // #CDE1FC
