@@ -1,0 +1,94 @@
+@import 'Tools';
+
+// ---------------------------------
+// ------------- INPUTS ------------
+// ---------------------------------
+
+.c-label-default {
+    padding-bottom: 6px;
+
+    @include textStyles(var(--ac-font-weight-2), var(--ac-font-size-4),var(--ac-line-height-7), var(--ac-color-text-main)
+    );
+}
+
+.c-input-default-lg {
+    position: relative;
+
+    @include inputStates;
+
+    @include dimensions(
+        100%, 48px, 200px, 400px
+    );
+
+    input {
+        @include dimensions(100%, 100%);
+        color: var(--ac-color-text-dark);
+
+        @include inputStyles(
+            $border: var(--ac-border-width-1) solid var(--ac-color-border), 
+            $borderRadius: var(--ac-border-radius-4),
+            $padding: 0 var(--ac-space-8)
+        );
+
+        ::placeholder {
+            color: var(--ac-color-text-gray);
+        }
+    }
+}
+
+.c-input-default-sm {
+    @extend .c-input-default-lg;
+
+    height: 36px;
+}
+
+.c-input-prefix-text-lg {
+    position: relative;
+    display: flex;
+
+    @include inputStates;
+
+    @include dimensions(
+         100%, 48px, 200px, 400px
+    );
+     
+    p {
+        padding:0 10px;
+        border: var(--ac-border-width-1) solid var(--ac-color-border);
+        color: var(--ac-color-text-gray);
+        @include flexCentered;
+        @include dimensions(
+            75px, 48px, 75px
+        );
+
+        @include borderRad(
+            $bl: var(--ac-border-radius-4), 
+            $tl: var(--ac-border-radius-4)
+        )
+    }
+
+    input {
+        padding: var(--ac-space-8);
+        border: var(--ac-border-width-1) solid var(--ac-color-border);
+
+        @include borderRad(
+            $br: var(--ac-border-radius-4), 
+            $tr: var(--ac-border-radius-4)
+        );
+
+        @include dimensions(
+            100%, 48px, 200px, 325px
+        );
+    }
+}
+
+.c-input-prefix-icon-lg {
+    @extend .c-input-prefix-text-lg;
+
+    i {
+        font-size: var(--ac-font-size-8);
+    }
+}
+// ---------------------------------
+// ------------- END OF INPUTS ------------
+// ---------------------------------

@@ -5,10 +5,11 @@ const spaceNum = 1
 
 export default {
     // ---------- COLORS ----------
-    '--ac-color-primary': 'rgba(42, 98, 167, 1)', // #2A62A7
-    '--ac-color-secondary': 'rgba(68, 153, 127, 1)', // #2A62A7
+    '--ac-color-primary-main': 'rgba(42, 98, 167, 1)', // #2A62A7
+    '--ac-color-secondary': 'rgba(68, 153, 127, 1)', // #4499AA
     '--ac-color-border': 'rgba(228, 230, 239, 1)', // #E4E6EF
     '--ac-color-text-gray': 'rgba(102, 112, 133, 1)', // #667085
+    '--ac-color-text-light-gray': 'rgba(181, 181, 195, 1)', // #B5B5C3
     '--ac-color-text-main': 'rgba(63, 66, 84, 1)', // #3F4254
     '--ac-color-text-dark': 'rgba(16, 24, 40, 1)', // #101828
     '--ac-color-gray': 'rgba(238, 238, 238, 1)', // #EEEEEE
@@ -17,7 +18,9 @@ export default {
     '--ac-color-warning': 'rgba(186, 27, 35, 1)', // #BA1B23
     '--ac-color-white': 'rgba(255, 255, 255, 1)', // #FFFFFF
     '--ac-color-error-main': 'rgba(240, 68, 56, 1)', // #F04438
+    '--ac-color-base-white': 'rgba(255, 255, 255, 1)', // #FFF
     '--ac-color-error-light': 'rgba(253, 162, 155, 1)', // #FDA29B
+    '--ac-color-shadow': 'rgba(16, 24, 40, 0.05)',
     '--ac-color-primary-25': 'rgba(237, 245, 255, 1)', // #EDF5FF
     '--ac-color-primary-50': 'rgba(205, 225, 252, 1)', // #CDE1FC
     '--ac-color-primary-100': 'rgba(168, 202, 244, 1)', // #A8CAF4
@@ -152,4 +155,6 @@ export default {
     '--ac-line-height-3': `${lineHeightNum * 125}%`,
     '--ac-line-height-4': `${lineHeightNum * 130}%`,
     '--ac-line-height-5': `${lineHeightNum * 140}%`,
+    // ---------- SHADOWS ----------
+    '--ac-shadow-xs':'0px 1px 2px 0px var(--ac-color-shadow)',
 }

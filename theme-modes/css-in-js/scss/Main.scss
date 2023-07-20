@@ -5,142 +5,63 @@
 @import 'Utilities';
 @import 'Tools';
 
-.c-label-default {
-    padding-bottom: 6px;
+@mixin buttonsCommon {
+    border-radius: var(--ac-border-radius-4);
+    border: none;
+    font-weight: var(--ac-font-weight-4);
+    width: fit-content;
+    box-shadow: var(--ac-shadow-xs);
+    transition: var(--ac-transition-md) background-color;
 
-    @include textStyles(
-        $fontWeight: var(--ac-font-weight-2),
-        $fontSize: var(--ac-font-size-4),
-        $lineHeight: var(--ac-line-height-7),
-        $color: var(--ac-color-text-main)
-    );
-}
-
-@mixin inputStates {
-    &.filled {
-        > p {
-            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
-        }
-
-        > input {
-            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
-        }
-    }
-
-    &.error {
-        > input {
-            padding-right: var(--ac-space-14);
-            border:var(--ac-border-width-1) solid var(--ac-color-error-light);
-        }
-
-        & > i {
-            position: absolute;
-            right: 3%;
-            top: calc(50% - (var(--ac-font-size-7) / 2));
-            font-size: var(--ac-font-size-7);
-        }
-    
-        & > i[class*="exclamation"] {
-            color: var(--ac-color-error-main);
-        }
+    &:hover {
+        background-color: var(--ac-color-primary-700);
     }
 
     &.disabled {
-        background-color: var(--ac-color-gray-50);
-    }
-}
+        background-color: var(--ac-color-primary-300);
 
-.c-input-default-lg {
-    position: relative;
-
-    @include inputStates;
-
-    @include dimensions(
-        100%, 48px, 400px, 200px
-    );
-
-    input {
-        @include dimensions(100%, 100%);
-        @include textStyles($color: var(--ac-color-text-dark)); 
-
-        @include inputStyles(
-            $border: var(--ac-border-width-1) solid var(--ac-color-border), 
-            $borderRadius: var(--ac-border-radius-4),
-            $padding: 0 var(--ac-space-8)
-        );
-
-        ::placeholder {
-            @include textStyles($color:var(--ac-color-text-gray));
+        &:hover {
+            background-color: var(--ac-color-primary-300);
         }
     }
 }
 
-.c-input-default-sm {
-    @extend .c-input-default-lg;
+.c-button-default-sm {
+    padding: 0 14px;
+    background-color: var(--ac-color-primary-main);
 
-    height: 36px;
+    @include buttonsCommon;
+    @include dimensions($h:33px, $minw: fit-content);
+    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
 }
 
-.c-input-prefix-text-lg {
-    position: relative;
-    display: flex;
+.c-button-default-md {
+    padding: 0 16px;
+    background-color: var(--ac-color-primary-main);
 
-    @include inputStates;
-
-    @include dimensions(
-         100%, 48px, 400px, 200px
-    );
-     
-    p {
-        padding:0 10px;
-        @include flexCentered;
-        @include textStyles($color: var(--ac-color-text-gray));
-        @include dimensions(
-            75px, 48px, 75px
-        );
-
-        @include borderRad(
-            $border: var(--ac-border-width-1) solid var(--ac-color-border),
-            $borderRadBottomLeft: var(--ac-border-radius-4), 
-            $borderRadTopLeft: var(--ac-border-radius-4)
-        )
-    }
-
-    input {
-        padding: var(--ac-space-8);
-
-        @include borderRad(
-            $border: var(--ac-border-width-1) solid var(--ac-color-border),
-            $borderRadBottomRight: var(--ac-border-radius-4), 
-            $borderRadTopRight: var(--ac-border-radius-4)
-        );
-
-        @include dimensions(
-            100%, 48px, 200px, 325px
-        );
-    }
+    @include buttonsCommon;
+    @include dimensions($h: 40px, $minw: fit-content);
+    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
 }
 
-.c-input-prefix-icon-lg {
-    @extend .c-input-prefix-text-lg;
+.c-button-default-lg {
+    padding: 0 20px;
+    background-color: var(--ac-color-primary-main);
 
-    i {
-        font-size: var(--ac-font-size-8);
-    }
-}
-
-.u-b-error {
-    border:var(--ac-border-width-1) solid var(--ac-color-error-light) !important;
+    @include buttonsCommon;
+    @include dimensions($h: 40px, $minw: fit-content);
+    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
 }
 
 // IGNORE CSS BELOW
 .grid-container {
     width: 100%;
-    height: 800px;
+    height: auto;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+    
     > .item-wrapper {
         border: 2px dotted rgb(205, 205, 205);
     }
@@ -154,3 +75,8 @@
     padding:15px;
 }
 
+.item__buttons {
+    button {
+        margin-bottom: 10px;
+    }
+}

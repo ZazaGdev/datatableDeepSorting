@@ -1,13 +1,30 @@
 @mixin textStyles(
-    $fontWeight: var(--ac-font-weight-2), 
-    $fontSize: var(--ac-font-size-5), 
-    $lineHeight:var(--ac-line-height-3), 
-    $color: var(--ac-color-text-main)) 
+    $fw: null, 
+    $fs: null, 
+    $lh: null, 
+    $c: null, 
+    $ls: null) 
     {
-        font-weight: $fontWeight;
-        font-size: $fontSize;
-        line-height: $lineHeight;
-        color: $color;
+        @if $fw != null {
+            font-weight: $fw;
+        } 
+    
+        @if $fs != null {
+            font-size: $fs;
+        } 
+    
+        @if $lh != null {
+            line-height: $lh;
+        } 
+    
+        @if $c != null {
+            color: $c;
+        } 
+
+        @if $ls != null { 
+            letter-spacing: $ls;
+        } 
+        
 }
 
 
@@ -24,69 +41,127 @@
 }
 
 @mixin borderRad(
-    $border: none,
-    $borderRadius: 0,
-    $borderRadTopLeft: 0, 
-    $borderRadTopRight: 0, 
-    $borderRadBottomRight: 0, 
-    $borderRadBottomLeft: 0) 
+    $tl: null, 
+    $tr: null, 
+    $br: null, 
+    $bl: null) 
     {
-        border: $border;
-        border-radius: $borderRadius;
-        border-top-left-radius: $borderRadTopLeft;
-        border-top-right-radius: $borderRadTopRight;
-        border-bottom-right-radius: $borderRadBottomRight;
-        border-bottom-left-radius: $borderRadBottomLeft;
-}
+    @if $tl != null {
+        border-top-left-radius: $tl;
+    } 
 
+    @if $tr != null {
+        border-top-right-radius: $tr;
+    } 
+
+    @if $br != null {
+        border-bottom-right-radius: $br;
+    } 
+
+    @if $bl != null{
+        border-bottom-left-radius: $bl;
+    } 
+}
 
 @mixin border(
-    $border: 0,
-    $borderTop: 0, 
-    $borderRight: 0, 
-    $borderBottom: 0, 
-    $borderLeft: 0) 
+    $bt: null, 
+    $br: null, 
+    $bb: null, 
+    $bl: null) 
     {
-    @if $border != 0 {
-        border: $border;
-    } @else {
-        @if $borderTop != 0 {
-            border-top: $borderTop;
-        } 
+    @if $bt != null {
+        border-top: $bt;
+    } 
 
-        @if $borderRight != 0 {
-            border-right: $borderRight;
-        } 
+    @if $br != null {
+        border-right: $br;
+    } 
 
-        @if $borderBottom != 0 {
-            border-bottom: $borderBottom;
-        } 
+    @if $bb != null {
+        border-bottom: $bb;
+    } 
 
-        @if $borderLeft != 0{
-            border-left: $borderLeft;
-        } 
-    }
+    @if $bl != null{
+        border-left: $bl;
+    } 
 }
 
-
 @mixin dimensions(
-    $width: auto, 
-    $height: auto, 
-    $minWidth: 0, 
-    $maxWidth: none, 
-    $minHeight: 0, 
-    $maxHeight: none) 
+    $w: null, 
+    $h: null, 
+    $minw: null, 
+    $maxw: null, 
+    $minh: null, 
+    $maxh: null) 
     {
-        width: $width;
-        height: $height;
-        min-width: $minWidth;
-        max-width: $maxWidth;
-        min-height: $minHeight;
-        max-height: $maxHeight;
+        @if $w != null {
+            width: $w;
+        } 
+    
+        @if $h != null {
+            height: $h;
+        } 
+    
+        @if $minw != null {
+            min-width: $minw;
+        } 
+    
+        @if $maxw != null{
+            max-width: $maxw;
+        } 
+
+        @if $minh != null{
+            min-height: $minh;
+        } 
+
+        @if $maxh != null{
+            max-height: $maxh;
+        } 
 }
 
 @mixin flexCentered {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin inputStates {
+    &.filled {
+        > p {
+            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
+        }
+
+        > input {
+            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
+        }
+    }
+
+    &.error {
+        > input {
+            padding-right: var(--ac-space-14);
+            border:var(--ac-border-width-1) solid var(--ac-color-error-light);
+        }
+
+        & > i {
+            position: absolute;
+            right: 3%;
+            top: calc(50% - (var(--ac-font-size-7) / 2));
+            font-size: var(--ac-font-size-7);
+        }
+    
+        & > i[class*="exclamation"] {
+            color: var(--ac-color-error-main);
+        }
+    }
+
+    &.disabled {
+        input {
+            background-color: var(--ac-color-gray-50);
+            color:var(--ac-color-text-light-gray) !important;
+        }
+
+        ::placeholder {
+            color:var(--ac-color-text-light-gray) !important;
+        }
+    }
 }
