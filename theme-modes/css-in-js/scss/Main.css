@@ -458,6 +458,147 @@ textarea {
   color: var(--ac-color-text-light-gray) !important;
 }
 
+.c-button-error-sm {
+  padding: 0 14px;
+  height: 33px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-size: 0.75rem;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+  letter-spacing: 0.46px;
+  border-radius: var(--ac-border-radius-4);
+  font-weight: var(--ac-font-weight-4);
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: var(--ac-transition-md) background-color;
+  display: flex;
+  align-items: center;
+  background-color: var(--ac-color-error-600);
+  color: var(--ac-color-base-white);
+  box-shadow: var(--ac-shadow-xs);
+  border: none;
+}
+.c-button-error-sm:hover {
+  background-color: var(--ac-color-error-700);
+}
+.c-button-error-sm.disabled {
+  background-color: var(--ac-color-error-300);
+  color: var(--ac-color-error-100);
+}
+.c-button-error-sm.disabled:hover {
+  background-color: var(--ac-color-error-300);
+}
+.c-button-error-sm.outline {
+  background-color: transparent;
+  color: var(--ac-color-error-main);
+  box-shadow: none;
+  border: var(--ac-border-width-1) solid var(--ac-color-error-main);
+}
+.c-button-error-sm.outline:hover {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-300);
+  background-color: var(--ac-color-error-50);
+}
+.c-button-error-sm.outline.disabled {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-100);
+  background-color: var(--ac-color-error-25);
+  color: var(--ac-color-error-300);
+}
+
+.c-button-error-md {
+  padding: 0 16px;
+  height: 40px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-size: 0.875rem;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+  letter-spacing: 0.46px;
+  border-radius: var(--ac-border-radius-4);
+  font-weight: var(--ac-font-weight-4);
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: var(--ac-transition-md) background-color;
+  display: flex;
+  align-items: center;
+  background-color: var(--ac-color-error-600);
+  color: var(--ac-color-base-white);
+  box-shadow: var(--ac-shadow-xs);
+  border: none;
+}
+.c-button-error-md:hover {
+  background-color: var(--ac-color-error-700);
+}
+.c-button-error-md.disabled {
+  background-color: var(--ac-color-error-300);
+  color: var(--ac-color-error-100);
+}
+.c-button-error-md.disabled:hover {
+  background-color: var(--ac-color-error-300);
+}
+.c-button-error-md.outline {
+  background-color: transparent;
+  color: var(--ac-color-error-main);
+  box-shadow: none;
+  border: var(--ac-border-width-1) solid var(--ac-color-error-main);
+}
+.c-button-error-md.outline:hover {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-300);
+  background-color: var(--ac-color-error-50);
+}
+.c-button-error-md.outline.disabled {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-100);
+  background-color: var(--ac-color-error-25);
+  color: var(--ac-color-error-300);
+}
+
+.c-button-error-lg {
+  padding: 0 20px;
+  height: 48px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-size: 1rem;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+  letter-spacing: 0.46px;
+  border-radius: var(--ac-border-radius-4);
+  font-weight: var(--ac-font-weight-4);
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: var(--ac-transition-md) background-color;
+  display: flex;
+  align-items: center;
+  background-color: var(--ac-color-error-600);
+  color: var(--ac-color-base-white);
+  box-shadow: var(--ac-shadow-xs);
+  border: none;
+}
+.c-button-error-lg:hover {
+  background-color: var(--ac-color-error-700);
+}
+.c-button-error-lg.disabled {
+  background-color: var(--ac-color-error-300);
+  color: var(--ac-color-error-100);
+}
+.c-button-error-lg.disabled:hover {
+  background-color: var(--ac-color-error-300);
+}
+.c-button-error-lg.outline {
+  background-color: transparent;
+  color: var(--ac-color-error-main);
+  box-shadow: none;
+  border: var(--ac-border-width-1) solid var(--ac-color-error-main);
+}
+.c-button-error-lg.outline:hover {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-300);
+  background-color: var(--ac-color-error-50);
+}
+.c-button-error-lg.outline.disabled {
+  border: var(--ac-border-width-1) solid var(--ac-color-error-100);
+  background-color: var(--ac-color-error-25);
+  color: var(--ac-color-error-300);
+}
+
 .grid-container {
   width: 100%;
   height: auto;
