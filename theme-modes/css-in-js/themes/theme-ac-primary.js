@@ -12,7 +12,7 @@ export default {
     '--ac-color-text-light-gray': 'rgba(181, 181, 195, 1)', // #B5B5C3
     '--ac-color-text-main': 'rgba(63, 66, 84, 1)', // #3F4254
     '--ac-color-text-dark': 'rgba(16, 24, 40, 1)', // #101828
-    '--ac-color-gray': 'rgba(238, 238, 238, 1)', // #EEEEEE
+    '--ac-color-gray-main': 'rgba(238, 238, 238, 1)', // #EEEEEE
     '--ac-color-gray-bg': 'rgba(242, 244, 247, 1)', // #F2F4F7
     '--ac-color-gray-50': 'rgba(249, 250, 251, 1)', // #F9FAFB
     '--ac-color-warning': 'rgba(186, 27, 35, 1)', // #BA1B23

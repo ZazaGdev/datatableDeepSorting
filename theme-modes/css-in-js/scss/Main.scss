@@ -5,53 +5,6 @@
 @import 'Utilities';
 @import 'Tools';
 
-@mixin buttonsCommon {
-    border-radius: var(--ac-border-radius-4);
-    border: none;
-    font-weight: var(--ac-font-weight-4);
-    width: fit-content;
-    box-shadow: var(--ac-shadow-xs);
-    transition: var(--ac-transition-md) background-color;
-
-    &:hover {
-        background-color: var(--ac-color-primary-700);
-    }
-
-    &.disabled {
-        background-color: var(--ac-color-primary-300);
-
-        &:hover {
-            background-color: var(--ac-color-primary-300);
-        }
-    }
-}
-
-.c-button-default-sm {
-    padding: 0 14px;
-    background-color: var(--ac-color-primary-main);
-
-    @include buttonsCommon;
-    @include dimensions($h:33px, $minw: fit-content);
-    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
-}
-
-.c-button-default-md {
-    padding: 0 16px;
-    background-color: var(--ac-color-primary-main);
-
-    @include buttonsCommon;
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
-}
-
-.c-button-default-lg {
-    padding: 0 20px;
-    background-color: var(--ac-color-primary-main);
-
-    @include buttonsCommon;
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-base-white), $ls: 0.46px);
-}
 
 // IGNORE CSS BELOW
 .grid-container {
