@@ -22,7 +22,6 @@
         <link href="lib/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
     </head>
     <body class="p-3">
-        
         <script type="module">
             import ThemeManager from './theme-manager.js'
             // Prefix a theme name with @@ (e.g. @@ac-primary) to load the theme from the Theme controller
@@ -30,451 +29,543 @@
         </script>
 
         <ul>
-            <li>
-                <a href="#inputs">
-                    Inputs
-                </a>
+            <li data-target="inputs" class="u-cursor-pointer u-c-link-button">
+                Inputs
             </li>
-            <li>
-                <a href="#buttons">
-                    buttons
-                </a>
-                <ul>
-                    <li><a href="#buttonsPrimary">Primary</a></li>
-                    <li><a href="#buttonsSecondary">Secondary</a></li>
-                    <li><a href="#buttonsTertiary">Tertiary</a></li>
-                </ul>
+            <li data-target="buttons" class="u-cursor-pointer u-c-link-button">
+                Buttons
+            </li>
+            <li data-target="links" class="u-cursor-pointer u-c-link-button">
+                Links
+            </li>
+            <li data-target="resources" class="u-cursor-pointer u-c-link-button">
+                Resources
             </li>
         </ul>
 
-        <h1 id="inputs" class="pb-4">1. Inputs</h1>
-        <div class="grid-container d-none">
-            <div class="item-wrapper">
-                <div class="item">
+        <div data-parent="inputs">
+            <h1 id="inputs" class="pb-4">1. Inputs</h1>
+            <div class="grid-container">
+                <div class="item-wrapper">
+                    <div class="item">
+                        <h3 class="pb-3">Default</h3>
+                        <label class="c-label-default">c-input-default-lg</label>
+                        <div class="c-input-default-lg">
+                            <input placeholder="... > input" type="text" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="c-label-default">c-input-default-sm</label>
+
+                        <div class="c-input-default-sm" >
+                            <input placeholder="... > input" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <label class="c-label-default">c-input-prefix-text-lg</label>
+                        <div class="c-input-prefix-text-lg">
+                            <p>... > p</p>
+                            <input type="text" placeholder="... > input">
+                        </div>
+        
+                        <br>
+        
+                        <label class="c-label-default">c-input-prefix-icon-lg</label>
+                        <div class="c-input-prefix-icon-lg">
+                            <p><i class="fa-regular fa-envelope"></i></p>
+                            <input type="text" placeholder="... > input">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item-wrapper">
+                    <div class="item">
+                        <h3 class="pb-3">Filled</h3>
+        
+                        <label class="c-label-default">c-input-default-lg filled</label>
+                        <div class="c-input-default-lg filled">
+                            <input placeholder="... > input" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <label class="c-label-default">c-input-default-sm filled</label>
+                        <div class="c-input-default-sm filled">
+                            <input placeholder="... > input" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <label class="c-label-default">c-input-prefix-text-lg filled</label>
+                        <div class="c-input-prefix-text-lg filled">
+                            <p>+70</p>
+                            <input type="text" placeholder="... > input">
+                        </div>
+        
+                        <br>
+
+                        <label class="c-label-default">c-input-prefix-icon-lg filled</label>
+                        <div class="c-input-prefix-icon-lg filled">
+                            <p><i class="fa-regular fa-phone"></i></p>
+                            <input type="text" placeholder="... > input"">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item-wrapper">
+                    <div class="item">
+                        <h3 class="pb-3">Error</h3>
+                        <label class="c-label-default">c-input-default-lg error</label>
+                        <div class="c-input-default-lg error">
+                            <input placeholder="... > input" type="text" />
+                            <i class="fa-regular fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="item">
+                        <label class="c-label-default">c-input-default-sm error</label>
+                        <div class="c-input-default-sm error">
+                            <input placeholder="... > input" type="text" />
+                            <i class="fa-regular fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="item">
+                        <label class="c-label-default">c-input-prefix-text-lg error</label>
+                        <div class="c-input-prefix-text-lg error">
+                            <p class="u-b-error">:}</p>
+                            <input type="text" class="error" placeholder="... > input">
+                            <i class="fa-regular fa-circle-exclamation"></i>
+                        </div>
+        
+                        <br>
+
+                        <label class="c-label-default">c-input-prefix-icon-lg error</label>
+                        <div class="c-input-prefix-icon-lg error">
+                            <p class="u-b-error"><i class="fa-regular fa-user"></i></p>
+                            <input type="text" placeholder="... > input">
+                            <i class="fa-regular fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item">
+                        <h3 class="pb-3">Disabled</h3>
+                        <label class="c-label-default">c-input-default-lg disabled</label>
+                        <div class="c-input-default-lg disabled">
+                            <input placeholder="... > input" type="text" disabled/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <label class="c-label-default">c-input-default-sm disabled</label>
+
+                        <div class="c-input-default-sm disabled" >
+                            <input placeholder="... > input" type="text" disabled />
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <label class="c-label-default">c-input-prefix-text-lg disabled</label>
+                        <div class="c-input-prefix-text-lg disabled">
+                            <p class="u-bg-disabled u-c-disabled">... > p</p>
+                            <input type="text" placeholder="... > input"  disabled>
+                        </div>
+        
+                        <br>
+        
+                        <label class="c-label-default">c-input-prefix-icon-lg disabled</label>
+
+                        <div class="c-input-prefix-icon-lg disabled">
+                            <p class="u-bg-disabled u-c-disabled"><i class="fa-regular fa-envelope"></i></p>
+                            <input type="text" placeholder="... > input"  disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-parent="buttons">
+            <ul>
+                <li>
+                    <ul>
+                        <li><a href="#buttonsPrimary">Primary</a></li>
+                        <li><a href="#buttonsSecondary">Secondary</a></li>
+                        <li><a href="#buttonsTertiary">Tertiary</a></li>
+                        <li><a href="#buttonsError">Error</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h1 class="py-5">2. Buttons</h1>
+            <h3 id="buttonsPrimary" class="pb-4">Primary</h3>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
                     <h3 class="pb-3">Default</h3>
-                    <label class="c-label-default">c-input-default-lg</label>
-                    <div class="c-input-default-lg">
-                        <input placeholder="... > input" type="text" />
-                    </div>
-                </div>
-                <div class="item">
-                    <label class="c-label-default">c-input-default-sm</label>
-
-                    <div class="c-input-default-sm" >
-                        <input placeholder="... > input" type="text" />
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-primary-sm">c-button-primary-sm</button>
+                        <button class="c-button-primary-md">c-button-primary-md</button>
+                        <button class="c-button-primary-lg">c-button-primary-lg</button>
                     </div>
                 </div>
 
-                <div class="item">
-                    <label class="c-label-default">c-input-prefix-text-lg</label>
-                    <div class="c-input-prefix-text-lg">
-                        <p>... > p</p>
-                        <input type="text" placeholder="... > input">
-                    </div>
-    
-                    <br>
-    
-                    <label class="c-label-default">c-input-prefix-icon-lg</label>
-                    <div class="c-input-prefix-icon-lg">
-                        <p><i class="fa-regular fa-envelope"></i></p>
-                        <input type="text" placeholder="... > input">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-wrapper">
-                <div class="item">
-                    <h3 class="pb-3">Filled</h3>
-    
-                    <label class="c-label-default">c-input-default-lg filled</label>
-                    <div class="c-input-default-lg filled">
-                        <input placeholder="... > input" type="text" />
-                    </div>
-                </div>
-
-                <div class="item">
-                    <label class="c-label-default">c-input-default-sm filled</label>
-                    <div class="c-input-default-sm filled">
-                        <input placeholder="... > input" type="text" />
-                    </div>
-                </div>
-
-                <div class="item">
-                    <label class="c-label-default">c-input-prefix-text-lg filled</label>
-                    <div class="c-input-prefix-text-lg filled">
-                        <p>+70</p>
-                        <input type="text" placeholder="... > input">
-                    </div>
-    
-                    <br>
-
-                    <label class="c-label-default">c-input-prefix-icon-lg filled</label>
-                    <div class="c-input-prefix-icon-lg filled">
-                        <p><i class="fa-regular fa-phone"></i></p>
-                        <input type="text" placeholder="... > input"">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="item-wrapper">
-                <div class="item">
-                    <h3 class="pb-3">Error</h3>
-                    <label class="c-label-default">c-input-default-lg error</label>
-                    <div class="c-input-default-lg error">
-                        <input placeholder="... > input" type="text" />
-                        <i class="fa-regular fa-circle-exclamation"></i>
-                    </div>
-                </div>
-                
-                
-                <div class="item">
-                    <label class="c-label-default">c-input-default-sm error</label>
-                    <div class="c-input-default-sm error">
-                        <input placeholder="... > input" type="text" />
-                        <i class="fa-regular fa-circle-exclamation"></i>
-                    </div>
-                </div>
-               
-                
-                <div class="item">
-                    <label class="c-label-default">c-input-prefix-text-lg error</label>
-                    <div class="c-input-prefix-text-lg error">
-                        <p class="u-b-error">:}</p>
-                        <input type="text" class="error" placeholder="... > input">
-                        <i class="fa-regular fa-circle-exclamation"></i>
-                    </div>
-    
-                    <br>
-
-                    <label class="c-label-default">c-input-prefix-icon-lg error</label>
-                    <div class="c-input-prefix-icon-lg error">
-                        <p class="u-b-error"><i class="fa-regular fa-user"></i></p>
-                        <input type="text" placeholder="... > input">
-                        <i class="fa-regular fa-circle-exclamation"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="item-wrapper">
-                <div class="item">
+                <div class="item-wrapper p-3">
                     <h3 class="pb-3">Disabled</h3>
-                    <label class="c-label-default">c-input-default-lg disabled</label>
-                    <div class="c-input-default-lg disabled">
-                        <input placeholder="... > input" type="text" disabled/>
-                    </div>
-                </div>
-                <div class="item">
-                    <label class="c-label-default">c-input-default-sm disabled</label>
 
-                    <div class="c-input-default-sm disabled" >
-                        <input placeholder="... > input" type="text" disabled />
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-primary-sm disabled" disabled>c-button-primary-sm disabled</button>
+                        <button class="c-button-primary-md disabled" disabled>c-button-primary-md disabled</button>
+                        <button class="c-button-primary-lg disabled" disabled>c-button-primary-lg disabled</button>
                     </div>
                 </div>
 
-                <div class="item">
-                    <label class="c-label-default">c-input-prefix-text-lg disabled</label>
-                    <div class="c-input-prefix-text-lg disabled">
-                        <p class="u-bg-disabled u-c-disabled">... > p</p>
-                        <input type="text" placeholder="... > input"  disabled>
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons</h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-primary-sm">
+                            c-button-primary-sm
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+
+                        <button class="c-button-primary-md">
+                            c-button-primary-md
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+
+                        <button class="c-button-primary-lg">
+                            c-button-primary-lg
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
                     </div>
-    
-                    <br>
-    
-                    <label class="c-label-default">c-input-prefix-icon-lg disabled</label>
+                </div>
+                
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons (disabled) </h3>
 
-                    <div class="c-input-prefix-icon-lg disabled">
-                        <p class="u-bg-disabled u-c-disabled"><i class="fa-regular fa-envelope"></i></p>
-                        <input type="text" placeholder="... > input"  disabled>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-primary-sm disabled" disabled>
+                            c-button-primary-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-primary-md disabled" disabled>
+                            c-button-primary-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-primary-lg disabled" disabled> 
+                            c-button-primary-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="buttonsSecondary" class="pb-3 pt-5">Secondary</h3>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Default</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-secondary-sm">c-button-secondary-sm</button>
+                        <button class="c-button-secondary-md">c-button-secondary-md</button>
+                        <button class="c-button-secondary-lg">c-button-secondary-lg</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Disabled</h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-secondary-sm disabled" disabled>c-button-secondary-sm disabled</button>
+                        <button class="c-button-secondary-md disabled" disabled>c-button-secondary-md disabled</button>
+                        <button class="c-button-secondary-lg disabled" disabled>c-button-secondary-lg disabled</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons</h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-secondary-sm">
+                            c-button-secondary-sm
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-secondary-md">
+                            c-button-secondary-md
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-secondary-lg">
+                            c-button-secondary-lg
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons (disabled) </h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-secondary-sm disabled" disabled>
+                            c-button-secondary-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-secondary-md disabled" disabled>
+                            c-button-secondary-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-secondary-lg disabled" disabled> 
+                            c-button-secondary-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="buttonsTertiary" class="pb-3 pt-5">Tertiary</h3>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Default</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-tertiary-sm">c-button-tertiary-sm</button>
+                        <button class="c-button-tertiary-md">c-button-tertiary-md</button>
+                        <button class="c-button-tertiary-lg">c-button-tertiary-lg</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Disabled</h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-tertiary-sm disabled" disabled>c-button-tertiary-sm disabled</button>
+                        <button class="c-button-tertiary-md disabled" disabled>c-button-tertiary-md disabled</button>
+                        <button class="c-button-tertiary-lg disabled" disabled>c-button-tertiary-lg disabled</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons</h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-tertiary-sm">
+                            c-button-tertiary-sm
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-tertiary-md">
+                            c-button-tertiary-md
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-tertiary-lg">
+                            c-button-tertiary-lg
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons (disabled) </h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-tertiary-sm disabled" disabled>
+                            c-button-tertiary-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-tertiary-md disabled" disabled>
+                            c-button-tertiary-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-tertiary-lg disabled" disabled> 
+                            c-button-tertiary-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="buttonsError" class="pb-3 pt-5">Error</h3>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Default</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm">c-button-error-sm</button>
+                        <button class="c-button-error-md">c-button-error-md</button>
+                        <button class="c-button-error-lg">c-button-error-lg</button>
+                    </div>
+
+                    <h3 class="pb-3 pt-4">Default Outline</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm outline">c-button-error-sm outline</button>
+                        <button class="c-button-error-md outline">c-button-error-md outline</button>
+                        <button class="c-button-error-lg outline">c-button-error-lg outline</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Disabled</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm disabled" disabled>c-button-error-sm disabled</button>
+                        <button class="c-button-error-md disabled" disabled>c-button-error-md disabled</button>
+                        <button class="c-button-error-lg disabled" disabled>c-button-error-lg disabled</button>
+                    </div>
+
+                    <h3 class="pb-3 pt-4">Disabled Outline</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm outline disabled" disabled>c-button-error-sm outline disabled</button>
+                        <button class="c-button-error-md outline disabled" disabled>c-button-error-md outline disabled</button>
+                        <button class="c-button-error-lg outline disabled" disabled>c-button-error-lg outline disabled</button>
+                    </div>
+                </div>
+
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm">
+                            c-button-error-sm
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-error-md">
+                            c-button-error-md
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-error-lg">
+                            c-button-error-lg
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+
+                    <h3 class="pb-3 pt-4">With Icons Outline</h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm outline">
+                            c-button-error-sm outline
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-error-md outline">
+                            c-button-error-md outline
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-error-lg outline">
+                            c-button-error-lg outline
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons disabled </h3>
+
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm disabled" disabled>
+                            c-button-error-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-error-md disabled" disabled>
+                            c-button-error-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-error-lg disabled" disabled> 
+                            c-button-error-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
+                    </div>
+
+                    <h3 class="pb-3">With Icons disabled and outlined </h3>
+                    <div class="item__buttons d-flex flex-column">
+                        <button class="c-button-error-sm disabled outline" disabled>
+                            c-button-error-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </button>
+                        <button class="c-button-error-md disabled outline" disabled>
+                            c-button-error-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </button>
+                        <button class="c-button-error-lg disabled outline" disabled> 
+                            c-button-error-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h1 id="buttons" class="py-5">2. Buttons</h1>
-        <h3 id="buttonsPrimary" class="pb-4">Primary</h3>
-        <div class="grid-container d-none">
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Default</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-primary-sm">c-button-primary-sm</button>
-                    <button class="c-button-primary-md">c-button-primary-md</button>
-                    <button class="c-button-primary-lg">c-button-primary-lg</button>
+        <div data-parent="links"> 
+            <h1 class="py-5">3. Links</h1>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Default</h3>
+                    <div class="item__links d-flex flex-column">
+                        <a href="#" class="c-link-button-sm">c-link-button-sm</a>
+                        <a href="#" class="c-link-button-md">c-link-button-md</a>
+                        <a href="#" class="c-link-button-lg">c-link-button-lg</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Disabled</h3>
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">Disabled</h3>
 
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-primary-sm disabled" disabled>c-button-primary-sm</button>
-                    <button class="c-button-primary-md disabled" disabled>c-button-primary-md</button>
-                    <button class="c-button-primary-lg disabled" disabled>c-button-primary-lg</button>
+                    <div class="item__links d-flex flex-column">
+                        <a href="#" class="c-link-button-sm disabled" disabled>c-link-button-sm disabled</a>
+                        <a href="#" class="c-link-button-md disabled" disabled>c-link-button-md disabled</a>
+                        <a href="#" class="c-link-button-lg disabled" disabled>c-link-button-lg disabled</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons</h3>
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons</h3>
 
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-primary-sm">
-                        c-button-primary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-primary-md">
-                        c-button-primary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-primary-lg">
-                        c-button-primary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
+                    <div class="item__links d-flex flex-column">
+                        <a href="#" class="c-link-button-sm">
+                            c-link-button-sm
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </a>
+
+                        <a href="#" class="c-link-button-md">
+                            c-link-button-md
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </a>
+
+                        <a href="#" class="c-link-button-lg">
+                            c-link-button-lg
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons (disabled) </h3>
+                
+                <div class="item-wrapper p-3">
+                    <h3 class="pb-3">With Icons (disabled) </h3>
 
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-primary-sm disabled" disabled>
-                        c-button-primary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-primary-md disabled" disabled>
-                        c-button-primary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-primary-lg disabled" disabled> 
-                        c-button-primary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <h3 id="buttonsSecondary" class="pb-3 pt-5">Secondary</h3>
-        <div class="grid-container d-none">
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Default</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-secondary-sm">c-button-secondary-sm</button>
-                    <button class="c-button-secondary-md">c-button-secondary-md</button>
-                    <button class="c-button-secondary-lg">c-button-secondary-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Disabled</h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-secondary-sm disabled" disabled>c-button-secondary-sm</button>
-                    <button class="c-button-secondary-md disabled" disabled>c-button-secondary-md</button>
-                    <button class="c-button-secondary-lg disabled" disabled>c-button-secondary-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons</h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-secondary-sm">
-                        c-button-secondary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-secondary-md">
-                        c-button-secondary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-secondary-lg">
-                        c-button-secondary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons (disabled) </h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-secondary-sm disabled" disabled>
-                        c-button-secondary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-secondary-md disabled" disabled>
-                        c-button-secondary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-secondary-lg disabled" disabled> 
-                        c-button-secondary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
+                    <div class="item__links d-flex flex-column">
+                        <a href="#" class="c-link-button-sm disabled" disabled>
+                            c-link-button-sm disabled
+                            <i class="fa-solid fa-magnifying-glass ps-2"></i>
+                        </a>
+                        <a href="#" class="c-link-button-md disabled" disabled>
+                            c-link-button-md disabled
+                            <i class="fa-solid fa-trash-can ps-2"></i>
+                        </a>
+                        <a href="#" class="c-link-button-lg disabled" disabled> 
+                            c-link-button-lg disabled
+                            <i class="fa-solid fa-map-location-dot ps-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <h3 id="buttonsTertiary" class="pb-3 pt-5">Tertiary</h3>
-        <div class="grid-container d-none">
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Default</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-tertiary-sm">c-button-tertiary-sm</button>
-                    <button class="c-button-tertiary-md">c-button-tertiary-md</button>
-                    <button class="c-button-tertiary-lg">c-button-tertiary-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Disabled</h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-tertiary-sm disabled" disabled>c-button-tertiary-sm</button>
-                    <button class="c-button-tertiary-md disabled" disabled>c-button-tertiary-md</button>
-                    <button class="c-button-tertiary-lg disabled" disabled>c-button-tertiary-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons</h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-tertiary-sm">
-                        c-button-tertiary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-tertiary-md">
-                        c-button-tertiary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-tertiary-lg">
-                        c-button-tertiary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons (disabled) </h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-tertiary-sm disabled" disabled>
-                        c-button-tertiary-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-tertiary-md disabled" disabled>
-                        c-button-tertiary-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-tertiary-lg disabled" disabled> 
-                        c-button-tertiary-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
+        <div data-parent="resources">
+            <ul>
+                <li>
+                    <h3>
+                        <a href="https://blog.getbootstrap.com/2021/06/22/bootstrap-5-0-2/">Bootstrap v5.0.2</a>
+                    </h3>
+                </li>
+                <li>
+                    <h3>
+                        <a href="https://fontawesome.com/v6/search?o=r&m=free">Fontawesome 6.4.0</a>
+                    </h3>
+                </li>
+            </ul>
         </div>
+        <script src="scripts.js"></script>
 
-        <h3 id="buttonserror" class="pb-3 pt-5">Error</h3>
-        <div class="grid-container">
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Default</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm">c-button-error-sm</button>
-                    <button class="c-button-error-md">c-button-error-md</button>
-                    <button class="c-button-error-lg">c-button-error-lg</button>
-                </div>
-
-                <h3 class="pb-3 pt-4">Default Outline</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm outline">c-button-error-sm</button>
-                    <button class="c-button-error-md outline">c-button-error-md</button>
-                    <button class="c-button-error-lg outline">c-button-error-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">Disabled</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm disabled" disabled>c-button-error-sm</button>
-                    <button class="c-button-error-md disabled" disabled>c-button-error-md</button>
-                    <button class="c-button-error-lg disabled" disabled>c-button-error-lg</button>
-                </div>
-
-                <h3 class="pb-3 pt-4">Disabled Outline</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm outline disabled" disabled>c-button-error-sm</button>
-                    <button class="c-button-error-md outline disabled" disabled>c-button-error-md</button>
-                    <button class="c-button-error-lg outline disabled" disabled>c-button-error-lg</button>
-                </div>
-            </div>
-
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm">
-                        c-button-error-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-error-md">
-                        c-button-error-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-error-lg">
-                        c-button-error-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-
-                <h3 class="pb-3 pt-4">With Icons Outline</h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm outline">
-                        c-button-error-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-error-md outline">
-                        c-button-error-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-error-lg outline">
-                        c-button-error-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="item-wrapper p-3">
-                <h3 class="pb-3">With Icons disabled </h3>
-
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm disabled" disabled>
-                        c-button-error-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-error-md disabled" disabled>
-                        c-button-error-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-error-lg disabled" disabled> 
-                        c-button-error-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-
-                <h3 class="pb-3">With Icons disabled and outlined </h3>
-                <div class="item__buttons d-flex flex-column">
-                    <button class="c-button-error-sm disabled outline" disabled>
-                        c-button-error-sm
-                        <i class="fa-solid fa-magnifying-glass ps-2"></i>
-                    </button>
-                    <button class="c-button-error-md disabled outline" disabled>
-                        c-button-error-md
-                        <i class="fa-solid fa-trash-can ps-2"></i>
-                    </button>
-                    <button class="c-button-error-lg disabled outline" disabled> 
-                        c-button-error-lg
-                        <i class="fa-solid fa-map-location-dot ps-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

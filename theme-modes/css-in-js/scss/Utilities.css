@@ -12,4 +12,12 @@
 
 .u-c-disabled {
   color: var(--ac-color-text-light-gray) !important;
+}
+
+.u-c-link {
+  color: var(--ac-color-primary-400) !important;
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
 }/*# sourceMappingURL=Utilities.css.map */

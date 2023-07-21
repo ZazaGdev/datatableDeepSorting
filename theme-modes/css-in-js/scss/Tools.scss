@@ -1,4 +1,4 @@
-@mixin textStyles(
+@mixin t-textStyles(
     $fw: null, 
     $fs: null, 
     $lh: null, 
@@ -27,20 +27,7 @@
         
 }
 
-
-@mixin inputStyles(
-    $backgroundColor: transparent, 
-    $border: none, 
-    $borderRadius: 0, 
-    $padding: 0) 
-    {
-        background-color: $backgroundColor;
-        border: $border;
-        border-radius: $borderRadius;
-        padding: $padding;
-}
-
-@mixin borderRad(
+@mixin t-borderRad(
     $tl: null, 
     $tr: null, 
     $br: null, 
@@ -63,7 +50,7 @@
     } 
 }
 
-@mixin border(
+@mixin t-border(
     $bt: null, 
     $br: null, 
     $bb: null, 
@@ -86,7 +73,7 @@
     } 
 }
 
-@mixin dimensions(
+@mixin t-dimensions(
     $w: null, 
     $h: null, 
     $minw: null, 
@@ -119,13 +106,26 @@
         } 
 }
 
-@mixin flexCentered {
+@mixin t-flexCentered {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-@mixin inputsCommon {
+@mixin t-inputsCommon {
+    input {
+        transition: var(--ac-transition-md) border;
+
+        &:focus-visible,
+        &:focus {
+            border: var(--ac-border-width-1) solid var(--ac-color-gray-700) !important;
+        }
+
+        &:not(:focus-visible):hover,
+        &:not(:focus):hover {
+            border: var(--ac-border-width-1) solid var(--ac-color-gray-500) !important;
+        }
+    }
     &.filled {
         > p {
             border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
@@ -232,5 +232,64 @@
         &:hover {
             background-color: transparent;
         }
+    }
+}
+
+@mixin t-errorButtonsCommon {
+    background-color: var(--ac-color-error-600);
+    color: var(--ac-color-base-white);
+    box-shadow: var(--ac-shadow-xs);
+    border: none;
+
+    &:hover {
+        background-color: var(--ac-color-error-700)
+    }
+
+    &.disabled {
+        background-color: var(--ac-color-error-300);
+        color: var(--ac-color-error-100);
+
+        &:hover {
+            background-color: var(--ac-color-error-300);
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        color: var(--ac-color-error-main);
+        box-shadow: none;
+        border: var(--ac-border-width-1) solid var(--ac-color-error-main);
+
+        &:hover {
+            border: var(--ac-border-width-1) solid var(--ac-color-error-300);
+            background-color: var(--ac-color-error-50);
+        }
+        
+        &.disabled {
+            border: var(--ac-border-width-1) solid var(--ac-color-error-100);
+            background-color: var(--ac-color-error-25);
+            color: var(--ac-color-error-300) ;
+        }
+    }
+}
+
+
+@mixin t-linkButtonsCommon {
+    text-decoration: none;
+    border-radius: var(--ac-border-radius-4);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transition: var(--ac-transition-md) background-color;
+    
+    @include t-textStyles($c: var(--ac-color-primary-400), $lh: var(--ac-line-height-5), $ls: 0.4px, $fw: var(--ac-font-weight-4));
+
+    &:hover {
+        background-color: var(--ac-color-primary-25);
+    }
+
+    &.disabled {
+        background-color: var(--ac-color-gray-50);
+        color: var(--ac-color-primary-50);
     }
 }

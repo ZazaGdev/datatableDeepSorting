@@ -7,28 +7,25 @@
 .c-label-default {
     padding-bottom: 6px;
 
-    @include textStyles(var(--ac-font-weight-2), var(--ac-font-size-4),var(--ac-line-height-7), var(--ac-color-text-main)
+    @include t-textStyles(var(--ac-font-weight-2), var(--ac-font-size-4),var(--ac-line-height-7), var(--ac-color-text-main)
     );
 }
 
 .c-input-default-lg {
     position: relative;
 
-    @include inputsCommon;
+    @include t-inputsCommon;
 
-    @include dimensions(
+    @include t-dimensions(
         100%, 48px, 200px, 400px
     );
 
     input {
-        @include dimensions(100%, 100%);
+        @include t-dimensions(100%, 100%);
         color: var(--ac-color-text-dark);
-
-        @include inputStyles(
-            $border: var(--ac-border-width-1) solid var(--ac-color-border), 
-            $borderRadius: var(--ac-border-radius-4),
-            $padding: 0 var(--ac-space-8)
-        );
+        padding: 0 var(--ac-space-8);
+        border: var(--ac-border-width-1) solid var(--ac-color-border); 
+        border-radius: var(--ac-border-radius-4);
 
         ::placeholder {
             color: var(--ac-color-text-gray);
@@ -46,9 +43,9 @@
     position: relative;
     display: flex;
 
-    @include inputsCommon;
+    @include t-inputsCommon;
 
-    @include dimensions(
+    @include t-dimensions(
          100%, 48px, 200px, 400px
     );
      
@@ -56,12 +53,12 @@
         padding:0 10px;
         border: var(--ac-border-width-1) solid var(--ac-color-border);
         color: var(--ac-color-text-gray);
-        @include flexCentered;
-        @include dimensions(
+        @include t-flexCentered;
+        @include t-dimensions(
             75px, 48px, 75px
         );
 
-        @include borderRad(
+        @include t-borderRad(
             $bl: var(--ac-border-radius-4), 
             $tl: var(--ac-border-radius-4)
         )
@@ -71,12 +68,12 @@
         padding: var(--ac-space-8);
         border: var(--ac-border-width-1) solid var(--ac-color-border);
 
-        @include borderRad(
+        @include t-borderRad(
             $br: var(--ac-border-radius-4), 
             $tr: var(--ac-border-radius-4)
         );
 
-        @include dimensions(
+        @include t-dimensions(
             100%, 48px, 200px, 325px
         );
     }
@@ -105,15 +102,15 @@
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
     
-    @include dimensions($h:33px, $minw: fit-content);
-    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h:33px, $minw: fit-content);
+    @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
 }
 
 .c-button-primary-md {
     padding: 0 16px;
 
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h: 40px, $minw: fit-content);
+    @include t-textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
     
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
@@ -122,8 +119,8 @@
 .c-button-primary-lg {
     padding: 0 20px;
 
-    @include dimensions($h: 48px, $minw: fit-content);
-    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h: 48px, $minw: fit-content);
+    @include t-textStyles($fs:1rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
     
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
@@ -133,8 +130,8 @@
 .c-button-secondary-sm {
     padding: 0 14px;
     
-    @include dimensions($h:33px, $minw: fit-content);
-    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h:33px, $minw: fit-content);
+    @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
     
     @include t-buttonsCommon;
     @include t-secondaryButtonsCommon;
@@ -143,8 +140,8 @@
 .c-button-secondary-md {
     padding: 0 16px;
 
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h: 40px, $minw: fit-content);
+    @include t-textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
 
     @include t-buttonsCommon;
     @include t-secondaryButtonsCommon;
@@ -153,8 +150,8 @@
 .c-button-secondary-lg {
     padding: 0 20px;
 
-    @include dimensions($h: 48px, $minw: fit-content);
-    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
+    @include t-dimensions($h: 48px, $minw: fit-content);
+    @include t-textStyles($fs:1rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
 
     @include t-buttonsCommon;
     @include t-secondaryButtonsCommon;
@@ -164,8 +161,8 @@
 .c-button-tertiary-sm {
     padding: 0 14px;
     
-    @include dimensions($h:33px, $minw: fit-content);
-    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+    @include t-dimensions($h:33px, $minw: fit-content);
+    @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
     
     @include t-buttonsCommon;
     @include t-tertiaryButtonsCommon;
@@ -174,8 +171,8 @@
 .c-button-tertiary-md {
     padding: 0 16px;
 
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+    @include t-dimensions($h: 40px, $minw: fit-content);
+    @include t-textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
 
     @include t-buttonsCommon;
     @include t-tertiaryButtonsCommon;
@@ -184,9 +181,72 @@
 .c-button-tertiary-lg {
     padding: 0 20px;
 
-    @include dimensions($h: 48px, $minw: fit-content);
-    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+    @include t-dimensions($h: 48px, $minw: fit-content);
+    @include t-textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
 
     @include t-buttonsCommon;
     @include t-tertiaryButtonsCommon;
+}
+
+.c-button-error-sm {
+    padding: 0 14px;
+    
+    @include t-dimensions($h:33px, $minw: fit-content);
+    @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+    
+    @include t-buttonsCommon;
+    @include t-errorButtonsCommon;
+}
+
+.c-button-error-md {
+    padding: 0 16px;
+
+    @include t-dimensions($h: 40px, $minw: fit-content);
+    @include t-textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+
+    @include t-buttonsCommon;
+    @include t-errorButtonsCommon;
+}
+
+.c-button-error-lg {
+    padding: 0 20px;
+
+    @include t-dimensions($h: 48px, $minw: fit-content);
+    @include t-textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
+
+    @include t-buttonsCommon;
+    @include t-errorButtonsCommon;
+}
+
+
+.c-link-button-sm {
+    padding: 0 14px;
+
+    @include t-linkButtonsCommon();
+
+    @include t-dimensions($h:33px, $minw: fit-content);
+
+    font-size: var(--ac-font-size-3);
+}
+
+
+.c-link-button-md {
+    padding: 0 16px;
+
+    @include t-linkButtonsCommon();
+
+    @include t-dimensions($h: 40px, $minw: fit-content);
+
+    font-size: var(--ac-font-size-4);
+}
+
+
+.c-link-button-lg {
+    padding: 0 20px;
+
+    @include t-linkButtonsCommon();
+
+    @include t-dimensions($h: 48px, $minw: fit-content);
+
+    font-size: var(--ac-font-size-5);
 }

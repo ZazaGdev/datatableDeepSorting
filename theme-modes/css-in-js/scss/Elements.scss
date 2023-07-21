@@ -2,16 +2,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-input {
-    transition: var(--ac-transition-md) border;
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 
-    &:focus-visible,
-    &:focus {
-        border: var(--ac-border-width-1) solid var(--ac-color-gray-700) !important;
-    }
-
-    &:not(:focus-visible):hover,
-    &:not(:focus):hover {
-        border: var(--ac-border-width-1) solid var(--ac-color-gray-500) !important;
-    }
+a[disabled] {
+    pointer-events: none;
 }

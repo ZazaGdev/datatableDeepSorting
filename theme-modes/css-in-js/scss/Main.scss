@@ -6,77 +6,6 @@
 @import 'Tools';
 
 
-@mixin t-errorButtonsCommon {
-    background-color: var(--ac-color-error-600);
-    color: var(--ac-color-base-white);
-    box-shadow: var(--ac-shadow-xs);
-    border: none;
-
-    &:hover {
-        background-color: var(--ac-color-error-700)
-    }
-
-    &.disabled {
-        background-color: var(--ac-color-error-300);
-        color: var(--ac-color-error-100);
-
-        &:hover {
-            background-color: var(--ac-color-error-300);
-        }
-    }
-
-    &.outline {
-        background-color: transparent;
-        color: var(--ac-color-error-main);
-        box-shadow: none;
-        border: var(--ac-border-width-1) solid var(--ac-color-error-main);
-
-        &:hover {
-            border: var(--ac-border-width-1) solid var(--ac-color-error-300);
-            background-color: var(--ac-color-error-50);
-        }
-        
-        &.disabled {
-            border: var(--ac-border-width-1) solid var(--ac-color-error-100);
-            background-color: var(--ac-color-error-25);
-            color: var(--ac-color-error-300) ;
-        }
-    }
-}
-
-.c-button-error-sm {
-    padding: 0 14px;
-    
-    @include dimensions($h:33px, $minw: fit-content);
-    @include textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
-    
-    @include t-buttonsCommon;
-    @include t-errorButtonsCommon;
-}
-
-.c-button-error-md {
-    padding: 0 16px;
-
-    @include dimensions($h: 40px, $minw: fit-content);
-    @include textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
-
-    @include t-buttonsCommon;
-    @include t-errorButtonsCommon;
-}
-
-.c-button-error-lg {
-    padding: 0 20px;
-
-    @include dimensions($h: 48px, $minw: fit-content);
-    @include textStyles($fs:1rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
-
-    @include t-buttonsCommon;
-    @include t-errorButtonsCommon;
-}
-
-
-
-
 // IGNORE CSS BELOW
 .grid-container {
     width: 100%;
@@ -101,6 +30,12 @@
 
 .item__buttons {
     button {
+        margin-bottom: 10px;
+    }
+}
+
+.item__links {
+    a {
         margin-bottom: 10px;
     }
 }
