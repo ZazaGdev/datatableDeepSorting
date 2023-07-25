@@ -28,18 +28,21 @@
             ThemeManager.applyTheme('ac-primary')
         </script>
 
-        <ul>
-            <li data-target="inputs" class="u-cursor-pointer u-c-link-button">
+        <ul class="d-flex"> 
+            <li data-target="inputs" class="u-cursor-pointer c-link-button-md">
                 Inputs
             </li>
-            <li data-target="buttons" class="u-cursor-pointer u-c-link-button">
+            <li data-target="buttons" class="u-cursor-pointer c-link-button-md">
                 Buttons
             </li>
-            <li data-target="links" class="u-cursor-pointer u-c-link-button">
+            <li data-target="links" class="u-cursor-pointer c-link-button-md">
                 Links
             </li>
-            <li data-target="resources" class="u-cursor-pointer u-c-link-button">
+            <li data-target="resources" class="u-cursor-pointer c-link-button-md">
                 Resources
+            </li>
+            <li data-target="checkboxes" class="u-cursor-pointer c-link-button-md">
+                Checkboxes & Custom Buttons
             </li>
         </ul>
 
@@ -550,6 +553,30 @@
                 </div>
             </div>
         </div>
+
+        <div data-parent="checkboxes"> 
+            <h1 class="py-5">5. Checkboxes</h1>
+            <div class="grid-container">
+                <div class="item-wrapper p-3">
+                    <label class="c-switch-sm" for="switcherSm">
+                        <input type="checkbox" id="switcherSm" />
+                        <div class="c-slider-sm round"></div>
+                    </label>
+
+                    <label class="c-switch-md" for="switcherMd">
+                        <input type="checkbox" id="switcherMd" />
+                        <div class="c-slider-md round"></div>
+                    </label>
+
+                    <label class="c-switch-lg" for="switcherLg">
+                        <input type="checkbox" id="switcherLg" />
+                        <div class="c-slider-lg round"></div>
+                    </label>
+                </div>
+                <script async src="//jsfiddle.net/ZazaGdev/d9zba6ts/32/embed/js,html,css,result/dark/"></script>
+            </div>
+        </div>
+
         <div data-parent="resources">
             <ul>
                 <li>
@@ -562,10 +589,15 @@
                         <a href="https://fontawesome.com/v6/search?o=r&m=free">Fontawesome 6.4.0</a>
                     </h3>
                 </li>
+                <li>
+                    <h3>
+                        <a href="https://code.jquery.com/jquery-3.6.0.min.js">jQuery 3.6.0</a>
+                    </h3>
+                </li>
             </ul>
         </div>
         <script src="scripts.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

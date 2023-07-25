@@ -1,5 +1,5 @@
 const fontSizeNum = 1
-const t-borderRadNum = 1
+const borderRadNum = 1
 const lineHeightNum = 1
 const spaceNum = 1
 
@@ -95,16 +95,16 @@ export default {
     '--ac-border-width-2': `2px`,
     '--ac-border-width-3': `3px`,
     '--ac-border-width-4': `5px`,
-    '--ac-border-radius-1': `${t-borderRadNum * 2}px`,
-    '--ac-border-radius-2': `${t-borderRadNum * 4}px`,
-    '--ac-border-radius-3': `${t-borderRadNum * 6}px`,
-    '--ac-border-radius-4': `${t-borderRadNum * 8}px`,
-    '--ac-border-radius-5': `${t-borderRadNum * 10}px`,
-    '--ac-border-radius-6': `${t-borderRadNum * 12}px`,
-    '--ac-border-radius-7': `${t-borderRadNum * 14}px`,
-    '--ac-border-radius-8': `${t-borderRadNum * 16}px`,
-    '--ac-border-radius-9': `${t-borderRadNum * 18}px`,
-    '--ac-border-radius-9': `${t-borderRadNum * 20}px`,
+    '--ac-border-radius-1': `${borderRadNum * 2}px`,
+    '--ac-border-radius-2': `${borderRadNum * 4}px`,
+    '--ac-border-radius-3': `${borderRadNum * 6}px`,
+    '--ac-border-radius-4': `${borderRadNum * 8}px`,
+    '--ac-border-radius-5': `${borderRadNum * 10}px`,
+    '--ac-border-radius-6': `${borderRadNum * 12}px`,
+    '--ac-border-radius-7': `${borderRadNum * 14}px`,
+    '--ac-border-radius-8': `${borderRadNum * 16}px`,
+    '--ac-border-radius-9': `${borderRadNum * 18}px`,
+    '--ac-border-radius-9': `${borderRadNum * 20}px`,
     // ---------- SPACING ----------
     '--ac-space-1': `${spaceNum * 2}px`,
     '--ac-space-2': `${spaceNum * 3}px`,
@@ -156,5 +156,5 @@ export default {
     '--ac-line-height-4': `${lineHeightNum * 130}%`,
     '--ac-line-height-5': `${lineHeightNum * 140}%`,
     // ---------- SHADOWS ----------
-    '--ac-shadow-xs':'0px 1px 2px 0px var(--ac-color-shadow)',
+    '--ac-shadow-xs': '0px 1px 2px 0px var(--ac-color-shadow)',
 }
