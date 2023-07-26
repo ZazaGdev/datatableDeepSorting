@@ -104,6 +104,34 @@
     }
 }
 
+@mixin t-position(
+    $p: null, 
+    $t: null, 
+    $r: null, 
+    $b: null, 
+    $l: null,) 
+    {
+        @if $p != null {
+            position: $p;
+        } 
+    
+        @if $t != null {
+            top: $t;
+        } 
+    
+        @if $r != null {
+            right: $r;
+        } 
+    
+        @if $b != null{
+            bottom: $b;
+        } 
+
+        @if $l != null{
+            left: $l;
+        } 
+}
+
 @mixin t-flexCentered {
     display: flex;
     align-items: center;

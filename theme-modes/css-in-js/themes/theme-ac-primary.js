@@ -156,5 +156,5 @@ export default {
     '--ac-line-height-4': `${lineHeightNum * 130}%`,
     '--ac-line-height-5': `${lineHeightNum * 140}%`,
     // ---------- SHADOWS ----------
-    '--ac-shadow-xs':'0px 1px 2px 0px var(--ac-color-shadow)',
+    '--ac-shadow-xs': '0px 1px 2px 0px var(--ac-color-shadow)',
 }
