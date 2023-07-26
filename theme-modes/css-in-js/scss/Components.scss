@@ -4,10 +4,41 @@
 // ------------- TEXTS -------------
 // ---------------------------------
 
-.u-text-dark-14 {
-    @include t-textStyles($fs: 14px, $fw:500, $lh:var(--ac-line-height-5))
+.u-t-dark-sm {
+    @include t-textStyles($c: var(--ac-color-text-main), $fs: 14px, $fw:500, $lh:var(--ac-line-height-5))
 }
 
+.u-t-dark-md {
+    @include t-textStyles($c: var(--ac-color-text-main), $fs: 16px, $fw:500, $lh:var(--ac-line-height-5))
+}
+
+.u-t-dark-lg {
+    @include t-textStyles($c: var(--ac-color-text-main), $fs: 18px, $fw:500, $lh:var(--ac-line-height-5))
+}
+
+.u-t-gray-sm {
+    @include t-textStyles($c: var(--ac-color-text-gray), $fs: 14px, $fw:400, $lh:var(--ac-line-height-5))
+}
+
+.u-t-gray-md {
+    @include t-textStyles($c: var(--ac-color-text-gray), $fs: 16px, $fw:400, $lh:var(--ac-line-height-5))
+}
+
+.u-t-gray-lg {
+    @include t-textStyles($c: var(--ac-color-text-gray), $fs: 18px, $fw:400, $lh:var(--ac-line-height-5))
+}
+
+.u-t-primary-sm {
+    @include t-textStyles($c: var(--ac-color-primary-main), $fs: 14px, $fw:500, $lh:var(--ac-line-height-5))
+}
+
+.u-t-primary-md {
+    @include t-textStyles($c: var(--ac-color-primary-main), $fs: 16px, $fw:500, $lh:var(--ac-line-height-5))
+}
+
+.u-t-primary-lg {
+    @include t-textStyles($c: var(--ac-color-primary-main), $fs: 18px, $fw:500, $lh:var(--ac-line-height-5))
+}
 // ---------------------------------
 // ---------END OF TEXTS -----------
 // ---------------------------------
@@ -17,6 +48,8 @@
 // ---------------------------------
 // ------------- INPUTS ------------
 // ---------------------------------
+
+// ------------ type text / textarea
 .c-label-default {
     padding-bottom: 6px;
 
@@ -83,6 +116,67 @@
         font-size: var(--ac-font-size-8);
     }
 }
+// ------------ END OF type text / textarea
+
+
+// ------------ type checkbox
+.c-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ span {
+            background-color: var(--ac-color-base-white);
+            border: 1px solid var(--ac-color-primary-main);
+        }
+
+        &:checked ~ span:after {
+            display: block;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: -4.5px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border-radius: 6px;
+        background-color: var(--ac-color-base-white);
+        border: 1px solid var(--ac-color-gray-300);
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6.5px;
+            top: 3px;
+            width: 6px;
+            height: 10px;
+            border: solid var(--ac-color-primary-main);
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    &:hover input ~ span {
+        background-color: var(--ac-color-gray-50);
+    }
+}
+// ------------ END OF type checkbox
 
 // ----------------------------------------
 // ------------- END OF INPUTS ------------

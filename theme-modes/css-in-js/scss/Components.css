@@ -1,7 +1,64 @@
-.u-text-dark-14 {
+.u-t-dark-sm {
   font-weight: 500;
   font-size: 14px;
   line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-dark-md {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-dark-lg {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-gray-sm {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-gray-md {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-gray-lg {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-primary-sm {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+}
+
+.u-t-primary-md {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+}
+
+.u-t-primary-lg {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
 }
 
 .c-label-default {
@@ -148,6 +205,57 @@
 
 .c-input-prefix-icon-lg i {
   font-size: var(--ac-font-size-8);
+}
+
+.c-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.c-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.c-checkbox input:checked ~ span {
+  background-color: var(--ac-color-base-white);
+  border: 1px solid var(--ac-color-primary-main);
+}
+.c-checkbox input:checked ~ span:after {
+  display: block;
+}
+.c-checkbox span {
+  position: absolute;
+  top: -4.5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+  background-color: var(--ac-color-base-white);
+  border: 1px solid var(--ac-color-gray-300);
+}
+.c-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6.5px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--ac-color-primary-main);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.c-checkbox:hover input ~ span {
+  background-color: var(--ac-color-gray-50);
 }
 
 .c-button-primary-sm {
