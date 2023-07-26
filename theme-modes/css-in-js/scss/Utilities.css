@@ -1,3 +1,63 @@
+.u-fw-1 {
+  font-weight: var(--ac-font-weight-1);
+}
+
+.u-fw-2 {
+  font-weight: var(--ac-font-weight-2);
+}
+
+.u-fw-3 {
+  font-weight: var(--ac-font-weight-3);
+}
+
+.u-fw-4 {
+  font-weight: var(--ac-font-weight-4);
+}
+
+.u-fw-5 {
+  font-weight: var(--ac-font-weight-5);
+}
+
+.u-fw-6 {
+  font-weight: var(--ac-font-weight-6);
+}
+
+.u-mw-10 {
+  max-width: 10%;
+}
+
+.u-mw-20 {
+  max-width: 20%;
+}
+
+.u-mw-30 {
+  max-width: 30%;
+}
+
+.u-mw-40 {
+  max-width: 40%;
+}
+
+.u-mw-50 {
+  max-width: 50%;
+}
+
+.u-mw-60 {
+  max-width: 60%;
+}
+
+.u-mw-70 {
+  max-width: 70%;
+}
+
+.u-mw-80 {
+  max-width: 80%;
+}
+
+.u-mw-90 {
+  max-width: 90%;
+}
+
 .u-b-error {
   border: var(--ac-border-width-1) solid var(--ac-color-error-light) !important;
 }

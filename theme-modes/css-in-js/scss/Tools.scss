@@ -1,109 +1,107 @@
-@mixin t-textStyles(
-    $fw: null, 
-    $fs: null, 
-    $lh: null, 
-    $c: null, 
-    $ls: null) 
-    {
-        @if $fw != null {
-            font-weight: $fw;
-        } 
-    
-        @if $fs != null {
-            font-size: $fs;
-        } 
-    
-        @if $lh != null {
-            line-height: $lh;
-        } 
-    
-        @if $c != null {
-            color: $c;
-        } 
+@mixin t-textStyles( $fw: null, $fs: null, $lh: null, $c: null, $ls: null) {
+    @if $fw != null {
+        font-weight: $fw;
+    }
 
-        @if $ls != null { 
-            letter-spacing: $ls;
-        } 
-        
+    @if $fs != null {
+        font-size: $fs;
+    }
+
+    @if $lh != null {
+        line-height: $lh;
+    }
+
+    @if $c != null {
+        color: $c;
+    }
+
+    @if $ls != null {
+        letter-spacing: $ls;
+    }
 }
 
-@mixin t-borderRad(
-    $tl: null, 
-    $tr: null, 
-    $br: null, 
-    $bl: null) 
-    {
+@mixin t-borderRad( $tl: null, $tr: null, $br: null, $bl: null) {
     @if $tl != null {
         border-top-left-radius: $tl;
-    } 
+    }
 
     @if $tr != null {
         border-top-right-radius: $tr;
-    } 
+    }
 
     @if $br != null {
         border-bottom-right-radius: $br;
-    } 
+    }
 
-    @if $bl != null{
+    @if $bl != null {
         border-bottom-left-radius: $bl;
-    } 
+    }
 }
 
-@mixin t-border(
-    $bt: null, 
-    $br: null, 
-    $bb: null, 
-    $bl: null) 
-    {
+@mixin t-border( $bt: null, $br: null, $bb: null, $bl: null) {
     @if $bt != null {
         border-top: $bt;
-    } 
+    }
 
     @if $br != null {
         border-right: $br;
-    } 
+    }
 
     @if $bb != null {
         border-bottom: $bb;
-    } 
+    }
 
-    @if $bl != null{
+    @if $bl != null {
         border-left: $bl;
-    } 
+    }
 }
 
-@mixin t-dimensions(
-    $w: null, 
-    $h: null, 
-    $minw: null, 
-    $maxw: null, 
-    $minh: null, 
-    $maxh: null) 
-    {
-        @if $w != null {
-            width: $w;
-        } 
-    
-        @if $h != null {
-            height: $h;
-        } 
-    
-        @if $minw != null {
-            min-width: $minw;
-        } 
-    
-        @if $maxw != null{
-            max-width: $maxw;
-        } 
+@mixin t-dimensions( $w: null, $h: null, $minw: null, $maxw: null, $minh: null, $maxh: null) {
+    @if $w != null {
+        width: $w;
+    }
 
-        @if $minh != null{
-            min-height: $minh;
-        } 
+    @if $h != null {
+        height: $h;
+    }
 
-        @if $maxh != null{
-            max-height: $maxh;
-        } 
+    @if $minw != null {
+        min-width: $minw;
+    }
+
+    @if $maxw != null {
+        max-width: $maxw;
+    }
+
+    @if $minh != null {
+        min-height: $minh;
+    }
+
+    @if $maxh != null {
+        max-height: $maxh;
+    }
+}
+
+@mixin t-position( $p: null, $t: null, $r: null, $b: null, $l: null,) {
+    @if $p != null {
+        position: $p;
+    }
+
+    @if $t != null {
+        top: $t;
+    }
+
+    @if $r != null {
+        right: $r;
+    }
+
+    @if $b != null {
+        bottom: $b;
+    }
+
+    @if $l != null {
+        left: $l;
+    }
 }
 
 @mixin t-flexCentered {
@@ -126,20 +124,21 @@
             border: var(--ac-border-width-1) solid var(--ac-color-gray-500) !important;
         }
     }
+
     &.filled {
         > p {
-            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
+            border: var(--ac-border-width-1) solid var(--ac-color-gray-300);
         }
 
         > input {
-            border:var(--ac-border-width-1) solid var(--ac-color-gray-300);
+            border: var(--ac-border-width-1) solid var(--ac-color-gray-300);
         }
     }
 
     &.error {
         > input {
             padding-right: var(--ac-space-14);
-            border:var(--ac-border-width-1) solid var(--ac-color-error-light);
+            border: var(--ac-border-width-1) solid var(--ac-color-error-light);
         }
 
         & > i {
@@ -148,7 +147,7 @@
             top: calc(50% - (var(--ac-font-size-7) / 2));
             font-size: var(--ac-font-size-7);
         }
-    
+
         & > i[class*="exclamation"] {
             color: var(--ac-color-error-main);
         }
@@ -157,11 +156,11 @@
     &.disabled {
         input {
             background-color: var(--ac-color-gray-50);
-            color:var(--ac-color-text-light-gray) !important;
+            color: var(--ac-color-text-light-gray) !important;
         }
 
         ::placeholder {
-            color:var(--ac-color-text-light-gray) !important;
+            color: var(--ac-color-text-light-gray) !important;
         }
     }
 }
@@ -264,11 +263,11 @@
             border: var(--ac-border-width-1) solid var(--ac-color-error-300);
             background-color: var(--ac-color-error-50);
         }
-        
+
         &.disabled {
             border: var(--ac-border-width-1) solid var(--ac-color-error-100);
             background-color: var(--ac-color-error-25);
-            color: var(--ac-color-error-300) ;
+            color: var(--ac-color-error-300);
         }
     }
 }
@@ -281,7 +280,7 @@
     align-items: center;
     width: fit-content;
     transition: var(--ac-transition-md) background-color;
-    
+
     @include t-textStyles($c: var(--ac-color-primary-400), $lh: var(--ac-line-height-5), $ls: 0.4px, $fw: var(--ac-font-weight-4));
 
     &:hover {

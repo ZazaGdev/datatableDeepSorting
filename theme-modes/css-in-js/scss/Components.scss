@@ -1,14 +1,26 @@
 @import 'Tools';
 
 // ---------------------------------
-// ------------- INPUTS ------------
+// ------------- TEXTS -------------
 // ---------------------------------
 
+.u-text-dark-14 {
+    @include t-textStyles($fs: 14px, $fw:500, $lh:var(--ac-line-height-5))
+}
+
+// ---------------------------------
+// ---------END OF TEXTS -----------
+// ---------------------------------
+
+
+
+// ---------------------------------
+// ------------- INPUTS ------------
+// ---------------------------------
 .c-label-default {
     padding-bottom: 6px;
 
-    @include t-textStyles(var(--ac-font-weight-2), var(--ac-font-size-4),var(--ac-line-height-7), var(--ac-color-text-main)
-    );
+    @include t-textStyles(var(--ac-font-weight-2), var(--ac-font-size-4),var(--ac-line-height-7), var(--ac-color-text-main) );
 }
 
 .c-input-default-lg {
@@ -16,15 +28,13 @@
 
     @include t-inputsCommon;
 
-    @include t-dimensions(
-        100%, 48px, 200px, 400px
-    );
+    @include t-dimensions( 100%, 48px, 200px, 400px );
 
     input {
         @include t-dimensions(100%, 100%);
         color: var(--ac-color-text-dark);
         padding: 0 var(--ac-space-8);
-        border: var(--ac-border-width-1) solid var(--ac-color-border); 
+        border: var(--ac-border-width-1) solid var(--ac-color-border);
         border-radius: var(--ac-border-radius-4);
 
         ::placeholder {
@@ -35,7 +45,6 @@
 
 .c-input-default-sm {
     @extend .c-input-default-lg;
-
     height: 36px;
 }
 
@@ -45,37 +54,25 @@
 
     @include t-inputsCommon;
 
-    @include t-dimensions(
-         100%, 48px, 200px, 400px
-    );
-     
+    @include t-dimensions( 100%, 48px, 200px, 400px );
+
     p {
-        padding:0 10px;
+        padding: 0 10px;
         border: var(--ac-border-width-1) solid var(--ac-color-border);
         color: var(--ac-color-text-gray);
         @include t-flexCentered;
-        @include t-dimensions(
-            75px, 48px, 75px
-        );
+        @include t-dimensions( 75px, 48px, 75px );
 
-        @include t-borderRad(
-            $bl: var(--ac-border-radius-4), 
-            $tl: var(--ac-border-radius-4)
-        )
+        @include t-borderRad( $bl: var(--ac-border-radius-4), $tl: var(--ac-border-radius-4) )
     }
 
     input {
         padding: var(--ac-space-8);
         border: var(--ac-border-width-1) solid var(--ac-color-border);
 
-        @include t-borderRad(
-            $br: var(--ac-border-radius-4), 
-            $tr: var(--ac-border-radius-4)
-        );
+        @include t-borderRad( $br: var(--ac-border-radius-4), $tr: var(--ac-border-radius-4) );
 
-        @include t-dimensions(
-            100%, 48px, 200px, 325px
-        );
+        @include t-dimensions( 100%, 48px, 200px, 325px );
     }
 }
 
@@ -86,6 +83,7 @@
         font-size: var(--ac-font-size-8);
     }
 }
+
 // ----------------------------------------
 // ------------- END OF INPUTS ------------
 // ----------------------------------------
@@ -101,7 +99,7 @@
 
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
-    
+
     @include t-dimensions($h:33px, $minw: fit-content);
     @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
 }
@@ -111,7 +109,7 @@
 
     @include t-dimensions($h: 40px, $minw: fit-content);
     @include t-textStyles($fs:0.875rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
-    
+
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
 }
@@ -121,7 +119,7 @@
 
     @include t-dimensions($h: 48px, $minw: fit-content);
     @include t-textStyles($fs:1rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
-    
+
     @include t-buttonsCommon;
     @include t-primaryButtonsCommon;
 }
@@ -129,10 +127,10 @@
 
 .c-button-secondary-sm {
     padding: 0 14px;
-    
+
     @include t-dimensions($h:33px, $minw: fit-content);
     @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $ls: 0.46px);
-    
+
     @include t-buttonsCommon;
     @include t-secondaryButtonsCommon;
 }
@@ -160,10 +158,10 @@
 
 .c-button-tertiary-sm {
     padding: 0 14px;
-    
+
     @include t-dimensions($h:33px, $minw: fit-content);
     @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
-    
+
     @include t-buttonsCommon;
     @include t-tertiaryButtonsCommon;
 }
@@ -190,10 +188,10 @@
 
 .c-button-error-sm {
     padding: 0 14px;
-    
+
     @include t-dimensions($h:33px, $minw: fit-content);
     @include t-textStyles($fs:0.75rem, $lh: var(--ac-line-height-5), $c: var(--ac-color-primary-main), $ls: 0.46px);
-    
+
     @include t-buttonsCommon;
     @include t-errorButtonsCommon;
 }
@@ -225,7 +223,6 @@
     @include t-linkButtonsCommon();
 
     @include t-dimensions($h:33px, $minw: fit-content);
-
     font-size: var(--ac-font-size-3);
 }
 
@@ -236,7 +233,6 @@
     @include t-linkButtonsCommon();
 
     @include t-dimensions($h: 40px, $minw: fit-content);
-
     font-size: var(--ac-font-size-4);
 }
 
@@ -247,6 +243,153 @@
     @include t-linkButtonsCommon();
 
     @include t-dimensions($h: 48px, $minw: fit-content);
-
     font-size: var(--ac-font-size-5);
 }
+
+// -----------------------------------------
+// ------------- END OF BUTTONS ------------
+// -----------------------------------------
+
+
+// -----------------------------------------
+// ------------- SWITCHER (CHECKBOX) -------
+// -----------------------------------------
+.c-switch-sm {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 36px;
+
+    input {
+        display: none;
+
+        &:checked + .c-slider-sm {
+            background-color: var(--ac-color-primary-main);
+
+            &:before {
+                transform: translateX(16px);
+            }
+        }
+    }
+}
+
+.c-slider-sm {
+    @include t-position(absolute, 0, 0, 0, 0);
+    background-color: var(--ac-color-gray-200);
+    transition: var(--ac-transition-md);
+    cursor: pointer;
+
+    &:before {
+        @include t-position(absolute, $b:3px, $l:3px);
+        background-color: var(--ac-color-base-white);
+        fill: var(--ac-color-base-white);
+        filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+        content: "";
+        height: 14px;
+        width: 14px;
+        transition: var(--ac-transition-md);
+    }
+
+    &.round {
+        border-radius: 20px;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.c-switch-md {
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    width: 44px;
+
+    input {
+        display: none;
+
+        &:checked + .c-slider-md {
+            background-color: var(--ac-color-primary-main);
+
+            &:before {
+                transform: translateX(18px);
+            }
+        }
+    }
+}
+
+.c-slider-md {
+    @include t-position(absolute, 0, 0, 0, 0);
+    background-color: var(--ac-color-gray-200);
+    transition: var(--ac-transition-md);
+    cursor: pointer;
+
+    &:before {
+        @include t-position(absolute, $b: 3px, $l: 3px);
+        background-color: var(--ac-color-base-white);
+        fill: var(--ac-color-base-white);
+        filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+        content: "";
+        height: 20px;
+        width: 20px;
+        transition: var(--ac-transition-md);
+    }
+
+    &.round {
+        border-radius: 20px;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+.c-switch-lg {
+    width: 56px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+
+    input {
+        display: none;
+
+        &:checked + .c-slider-lg {
+            background-color: var(--ac-color-primary-main);
+
+            &:before {
+                transform: translateX(24px);
+            }
+        }
+    }
+}
+
+.c-slider-lg {
+    @include t-position(absolute, 0, 0, 0, 0);
+    background-color: var(--ac-color-gray-200);
+    transition: var(--ac-transition-md);
+    cursor: pointer;
+
+    &:before {
+        @include t-position(absolute, $b: 4px, $l: 4px);
+        background-color: var(--ac-color-base-white);
+        fill: var(--ac-color-base-white);
+        filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+        content: "";
+        height: 24px;
+        width: 24px;
+        transition: var(--ac-transition-md);
+    }
+
+    &.round {
+        border-radius: 30px;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}
+
+// -------------------------------------
+// ------ END OF SWITCHER (CHECKBOX) ---
+// -------------------------------------

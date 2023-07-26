@@ -1,12 +1,14 @@
-* {
-  font-family: "Poppins", sans-serif;
-}
-
 a {
-  cursor: pointer;
   text-decoration: none;
 }
-
 a[disabled] {
   pointer-events: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus-visible {
+  outline-color: transparent;
 }/*# sourceMappingURL=Elements.css.map */

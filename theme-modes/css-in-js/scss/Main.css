@@ -1,3 +1,9 @@
+.u-text-dark-14 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+}
+
 .c-label-default {
   padding-bottom: 6px;
   font-weight: var(--ac-font-weight-2);
@@ -645,23 +651,161 @@
   color: var(--ac-color-primary-50);
 }
 
-* {
-  font-family: "Poppins", sans-serif;
+.c-switch-sm {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 36px;
+}
+.c-switch-sm input {
+  display: none;
+}
+.c-switch-sm input:checked + .c-slider-sm {
+  background-color: var(--ac-color-primary-main);
+}
+.c-switch-sm input:checked + .c-slider-sm:before {
+  transform: translateX(16px);
+}
+
+.c-slider-sm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ac-color-gray-200);
+  transition: var(--ac-transition-md);
+  cursor: pointer;
+}
+.c-slider-sm:before {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background-color: var(--ac-color-base-white);
+  fill: var(--ac-color-base-white);
+  filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+  content: "";
+  height: 14px;
+  width: 14px;
+  transition: var(--ac-transition-md);
+}
+.c-slider-sm.round {
+  border-radius: 20px;
+}
+.c-slider-sm.round:before {
+  border-radius: 50%;
+}
+
+.c-switch-md {
+  display: inline-block;
+  height: 26px;
+  position: relative;
+  width: 44px;
+}
+.c-switch-md input {
+  display: none;
+}
+.c-switch-md input:checked + .c-slider-md {
+  background-color: var(--ac-color-primary-main);
+}
+.c-switch-md input:checked + .c-slider-md:before {
+  transform: translateX(18px);
+}
+
+.c-slider-md {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ac-color-gray-200);
+  transition: var(--ac-transition-md);
+  cursor: pointer;
+}
+.c-slider-md:before {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  background-color: var(--ac-color-base-white);
+  fill: var(--ac-color-base-white);
+  filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+  content: "";
+  height: 20px;
+  width: 20px;
+  transition: var(--ac-transition-md);
+}
+.c-slider-md.round {
+  border-radius: 20px;
+}
+.c-slider-md.round:before {
+  border-radius: 50%;
+}
+
+.c-switch-lg {
+  width: 56px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+}
+.c-switch-lg input {
+  display: none;
+}
+.c-switch-lg input:checked + .c-slider-lg {
+  background-color: var(--ac-color-primary-main);
+}
+.c-switch-lg input:checked + .c-slider-lg:before {
+  transform: translateX(24px);
+}
+
+.c-slider-lg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--ac-color-gray-200);
+  transition: var(--ac-transition-md);
+  cursor: pointer;
+}
+.c-slider-lg:before {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background-color: var(--ac-color-base-white);
+  fill: var(--ac-color-base-white);
+  filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.1));
+  content: "";
+  height: 24px;
+  width: 24px;
+  transition: var(--ac-transition-md);
+}
+.c-slider-lg.round {
+  border-radius: 30px;
+}
+.c-slider-lg.round:before {
+  border-radius: 50%;
 }
 
 a {
-  cursor: pointer;
   text-decoration: none;
 }
-
 a[disabled] {
   pointer-events: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus-visible {
+  outline-color: transparent;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -669,12 +813,64 @@ p {
   margin: 0;
 }
 
-input:focus-visible {
-  outline-color: transparent;
+.u-fw-1 {
+  font-weight: var(--ac-font-weight-1);
 }
 
-textarea {
-  resize: none;
+.u-fw-2 {
+  font-weight: var(--ac-font-weight-2);
+}
+
+.u-fw-3 {
+  font-weight: var(--ac-font-weight-3);
+}
+
+.u-fw-4 {
+  font-weight: var(--ac-font-weight-4);
+}
+
+.u-fw-5 {
+  font-weight: var(--ac-font-weight-5);
+}
+
+.u-fw-6 {
+  font-weight: var(--ac-font-weight-6);
+}
+
+.u-mw-10 {
+  max-width: 10%;
+}
+
+.u-mw-20 {
+  max-width: 20%;
+}
+
+.u-mw-30 {
+  max-width: 30%;
+}
+
+.u-mw-40 {
+  max-width: 40%;
+}
+
+.u-mw-50 {
+  max-width: 50%;
+}
+
+.u-mw-60 {
+  max-width: 60%;
+}
+
+.u-mw-70 {
+  max-width: 70%;
+}
+
+.u-mw-80 {
+  max-width: 80%;
+}
+
+.u-mw-90 {
+  max-width: 90%;
 }
 
 .u-b-error {
