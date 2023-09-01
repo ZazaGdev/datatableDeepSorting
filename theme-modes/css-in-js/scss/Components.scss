@@ -61,7 +61,7 @@
 
     @include t-inputsCommon;
 
-    @include t-dimensions( 100%, 48px, 200px, 400px );
+    @include t-dimensions( 100%, 48px, 200px, 350px );
 
     input {
         @include t-dimensions(100%, 100%);
