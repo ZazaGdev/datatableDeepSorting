@@ -1,3 +1,4 @@
+import BpmnModeler from './node_modules/bpmn-js/lib/Modeler.js'
 let diagramData = {
     ID: '23998',
     GUID: '7b1280d7-7f71-4a27-aaa9-eae87a1adf74',
@@ -346,11 +347,11 @@ let diagramData = {
 
 const container = document.getElementById('canvas')
 const diagramUrl = diagramData.BPMN
-const modeler = new BpmnJS({
+const modeler = new BpmnModeler({
     container,
     keyboard: {
         bindTo: document,
-    } ,
+    },
 })
 
 modeler

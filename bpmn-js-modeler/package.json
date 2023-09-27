@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "bpmn-js": "^14.0.0",
-    "bpmn-js-guideline-validator": "^0.1.0"
+    "bpmn-js": "^14.0.0"
   }
 }
