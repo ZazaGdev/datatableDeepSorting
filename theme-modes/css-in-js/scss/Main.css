@@ -1,3 +1,66 @@
+.u-t-dark-sm {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-dark-md {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-dark-lg {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-main);
+}
+
+.u-t-gray-sm {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-gray-md {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-gray-lg {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-text-gray);
+}
+
+.u-t-primary-sm {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+}
+
+.u-t-primary-md {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+}
+
+.u-t-primary-lg {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: var(--ac-line-height-5);
+  color: var(--ac-color-primary-main);
+}
+
 .c-label-default {
   padding-bottom: 6px;
   font-weight: var(--ac-font-weight-2);
@@ -11,7 +74,7 @@
   width: 100%;
   height: 48px;
   min-width: 200px;
-  max-width: 400px;
+  max-width: 350px;
 }
 .c-input-default-lg input, .c-input-default-sm input {
   transition: var(--ac-transition-md) border;
@@ -142,6 +205,57 @@
 
 .c-input-prefix-icon-lg i {
   font-size: var(--ac-font-size-8);
+}
+
+.c-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.c-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.c-checkbox input:checked ~ span {
+  background-color: var(--ac-color-base-white);
+  border: 1px solid var(--ac-color-primary-main);
+}
+.c-checkbox input:checked ~ span:after {
+  display: block;
+}
+.c-checkbox span {
+  position: absolute;
+  top: -4.5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+  background-color: var(--ac-color-base-white);
+  border: 1px solid var(--ac-color-gray-300);
+}
+.c-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6.5px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--ac-color-primary-main);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.c-checkbox:hover input ~ span {
+  background-color: var(--ac-color-gray-50);
 }
 
 .c-button-primary-sm {
@@ -780,23 +894,26 @@
   border-radius: 50%;
 }
 
-* {
-  font-family: "Poppins", sans-serif;
-}
-
 a {
-  cursor: pointer;
   text-decoration: none;
 }
-
 a[disabled] {
   pointer-events: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus-visible {
+  outline-color: transparent;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -810,6 +927,66 @@ input:focus-visible {
 
 textarea {
   resize: none;
+}
+
+.u-fw-1 {
+  font-weight: var(--ac-font-weight-1);
+}
+
+.u-fw-2 {
+  font-weight: var(--ac-font-weight-2);
+}
+
+.u-fw-3 {
+  font-weight: var(--ac-font-weight-3);
+}
+
+.u-fw-4 {
+  font-weight: var(--ac-font-weight-4);
+}
+
+.u-fw-5 {
+  font-weight: var(--ac-font-weight-5);
+}
+
+.u-fw-6 {
+  font-weight: var(--ac-font-weight-6);
+}
+
+.u-mw-10 {
+  max-width: 10%;
+}
+
+.u-mw-20 {
+  max-width: 20%;
+}
+
+.u-mw-30 {
+  max-width: 30%;
+}
+
+.u-mw-40 {
+  max-width: 40%;
+}
+
+.u-mw-50 {
+  max-width: 50%;
+}
+
+.u-mw-60 {
+  max-width: 60%;
+}
+
+.u-mw-70 {
+  max-width: 70%;
+}
+
+.u-mw-80 {
+  max-width: 80%;
+}
+
+.u-mw-90 {
+  max-width: 90%;
 }
 
 .u-b-error {
@@ -834,12 +1011,6 @@ textarea {
 
 .u-cursor-pointer {
   cursor: pointer;
-}
-
-.u-text-dark-14 {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: var(--ac-line-height-5);
 }
 
 .grid-container {
