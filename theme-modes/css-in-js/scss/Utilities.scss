@@ -95,3 +95,7 @@
 .u-cursor-pointer {
     cursor: pointer;
 }
+
+.u-text-dark-14 {
+    @include t-textStyles($fs: 14px, $fw:500, $lh:var(--ac-line-height-5))
+}
